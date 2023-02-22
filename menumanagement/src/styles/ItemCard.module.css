@@ -1,0 +1,7 @@
+.box {
+  background-color: rgba(255, 228, 196, 0.343);
+  /* padding: 0.5em;
+  margin-bottom: 20px;
+  gap: 10px; */
+  display: inline-grid;
+}
