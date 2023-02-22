@@ -8,7 +8,7 @@ import styles from './page.module.css'
 const menuDivStyle = "border-solid border-indigo-500 border-2";
 
 const Menu = async () => {
-  const items = await getMenuFixtures();
+  const items = await getMenuFixtures(100);
 
   return (
     <div className={styles.menu}>
@@ -18,16 +18,12 @@ const Menu = async () => {
           return item.category === category;
         })
 
-        // console.log(`${Array.isArray(itemsByCategory)}`);
-        // console.log(`${Array.isArray(items)}`);
-
         return (
           <div className={styles.categorySections}>
             <div>
               <h2>{category}</h2>
             </div>
             <CategoryItems items={itemsByCategory} />
-            hello
           </div>
         )}
       )}

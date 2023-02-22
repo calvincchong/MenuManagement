@@ -1,18 +1,13 @@
 import styles from '../styles/ItemCard.module.css'
 
-const ItemCard = ({items}) => {
-  // console.log(items, `${Array.isArray(items)}`);
+const ItemCard = ({item}) => {
 
   return (
-    <>
-      {items.map((item, i) =>
-        <div className={styles.box} key={`${item.menuName} ${i}`}>
-          <h3>{item.menuName}</h3>
-          <h3>{item.price}</h3>
-          <p>{item.description}</p>
-        </div>
-      )}
-    </>
+      <div className={styles.box}>
+        <h3>{item.menuName}</h3>
+        <p>{item.description}</p>
+        <h3>{item.price}</h3>
+      </div>
   )
 }
 

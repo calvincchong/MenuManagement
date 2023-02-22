@@ -1,11 +1,12 @@
 .categorySections {
   /* justify-content: center; */
-  border-color: rgba(69, 69, 206, 0.587);
-  border-style: solid;
+  /* border-color: rgba(69, 69, 206, 0.587);
+  border-style: solid; */
   /* height: 100vh;
   width: 80vh; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
   margin: 0.5em;
   padding: 0.1em;
   justify-content: center;

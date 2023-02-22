@@ -14,5 +14,6 @@
 
 .twoCol {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - 8px));
+  grid-template-columns: repeat(2, calc(50% - .5em));
+  grid-gap: .5em .5em;
 }

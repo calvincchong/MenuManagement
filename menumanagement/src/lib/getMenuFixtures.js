@@ -10,13 +10,13 @@ const delay = (time) => {
   })
 }
 
-const getMenuFixtures = async () => {
+const getMenuFixtures = async (number = 30) => {
   // await delay(500);'
   console.log(categories, typeof categories)
 
-  return new Array(10).fill(1).map((el, i) => {
+  return new Array(number).fill(1).map((el, i) => {
     // get a random category to fill item;
-    const randomCategory = Math.floor(Math.random() * categories.length - 1);
+    const randomCategory = Math.floor(Math.random() * categories.length);
     const item = categories[randomCategory];
 
     return {

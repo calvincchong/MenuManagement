@@ -1,7 +1,7 @@
 .box {
-  border: black;
-  border-width: 5px;
-  border: solid;
-  background-color: bisque;
-  padding: 0.3em;
+  background-color: rgba(255, 228, 196, 0.343);
+  /* padding: 0.5em;
+  margin-bottom: 20px;
+  gap: 10px; */
+  display: inline-grid;
 }
