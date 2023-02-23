@@ -1,0 +1,30 @@
+.html {
+  scroll-margin-top: 4rem;
+}
+
+.linkBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar for Firefox */
+  /* overflow-x: hidden; */
+  max-height: 2em;
+  z-index: 100;
+  /* position: sticky; hidden b/c causes flashing before scrolling to content */
+}
+
+.inLine {
+  display: inline-block;
+  padding: .2em;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0.1em;
+  white-space: nowrap;
+  scroll-margin-top: 4rem;
+}
+
+.linkBar::-webkit-scrollbar {
+  display: none;
+}

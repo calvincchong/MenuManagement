@@ -1,8 +1,10 @@
 import { getMenuFixtures } from '../../lib/getMenuFixtures';
-import categoryFixtures from '../../lib/categoryFixtures';
+import { categories } from '../../lib/categoryFixtures';
 import { CategoryItems } from '../../components/CategoryItems';
 import { ItemCard } from '../../components/ItemCard';
-import styles from './page.module.css'
+import MenuLink from '../../components/MenuLink';
+import styles from './page.module.css';
+import Link from 'next/link';
 
 
 const menuDivStyle = "border-solid border-indigo-500 border-2";
@@ -13,13 +15,15 @@ const Menu = async () => {
   return (
     <div className={styles.menu}>
       <h1> Koo Koo Chicken Menu </h1>
-      {categoryFixtures.map((category, i) => {
+      <a href='#Specialty'>Specialties</a>
+      <MenuLink categories={categories} />
+      {categories.map((category, i) => {
         const itemsByCategory = items.filter(item => {
           return item.category === category;
         })
 
         return (
-          <div className={styles.categorySections}>
+          <div id={category} className={styles.categorySections}>
             <div>
               <h2>{category}</h2>
             </div>
