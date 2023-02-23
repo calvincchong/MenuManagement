@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { CategoryItems } from './components/CategoryItems';
-import { ItemCard } from './components/ItemCard';
+import { CategoryItems } from './CategoryItems';
+import { ItemCard } from './ItemCard';
 import styles from '../styles/OrderingApp.module.css'
 
-const OrderingApp = ({items}) => {
+const OrderingApp = ({items, categories}) => {
 
   return (
     <div className={styles.menuSection}>

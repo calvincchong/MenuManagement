@@ -9,20 +9,18 @@ const MenuLink = ({categories}) => {
   return (
     <div className={styles.stickyBar}>
       <div>
-
-
-      <div className={styles.linkBar}>
-        {categories.map((category, i) => {
-          return (
-            <a href={`#${category}`} key={`link-${category}-${i}`}>
-              <div className={styles.inLine}>
-                {category}
-              </div>
-            </a>
-          )
-        }
-        )}
-      </div>
+        <div className={styles.linkBar}>
+          {categories.map((category, i) => {
+            return (
+              <a href={`#${category}`} key={`link-${category}-${i}`}>
+                <div className={styles.inLine}>
+                  {category}
+                </div>
+              </a>
+            )
+          }
+          )}
+        </div>
       </div>
     </div>
   )

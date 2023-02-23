@@ -17,7 +17,7 @@ const Menu = async () => {
     <div className={styles.menu}>
       <h1> Koo Koo Chicken Menu </h1>
       <MenuLink categories={categories} />
-      <OrderingApp items={items}/>
+      <OrderingApp items={items} categories={categories} />
     </div>
   )
 }
