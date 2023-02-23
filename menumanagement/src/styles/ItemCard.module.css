@@ -1,7 +1,36 @@
 .box {
-  background-color: rgba(255, 228, 196, 0.343);
+  background-color: rgba(255, 228, 196, 0.143);
+  border-color: grey;
   /* padding: 0.5em;
   margin-bottom: 20px;
   gap: 10px; */
   display: inline-grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.menuName {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1ew;
+  grid-column-end: 1;
+  margin-left: .2em;
+  margin-top: .2em;
+}
+
+.price {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin-top: .2em;
+  margin-left: auto;
+}
+
+.description {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: -4;
+  grid-column-end: -1;
+  padding: .2em;
 }

@@ -1,6 +1,7 @@
-import categories from './categoryFixtures';
+import { categories, descriptions } from './categoryFixtures';
 
 console.log(categories);
+console.log('this is descriptions', descriptions);
 
 const delay = (time) => {
   return new Promise(() => {
@@ -12,11 +13,12 @@ const delay = (time) => {
 
 const getMenuFixtures = async (number = 30) => {
   // await delay(500);'
-  console.log(categories, typeof categories)
+  // console.log(categories, typeof categories)
 
   return new Array(number).fill(1).map((el, i) => {
     // get a random category to fill item;
     const randomCategory = Math.floor(Math.random() * categories.length);
+    const randomDescription = Math.floor(Math.random() * descriptions.length);
     const item = categories[randomCategory];
 
     return {
@@ -24,7 +26,7 @@ const getMenuFixtures = async (number = 30) => {
       menuName: `menu-${i}`,
       price: `$12`,
       category: item,
-      description: `this menu item tastes amazing`
+      description: descriptions[randomDescription]
     }
   })
 }
