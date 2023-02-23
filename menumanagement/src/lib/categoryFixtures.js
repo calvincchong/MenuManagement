@@ -12,6 +12,17 @@ const categories = [
   'Sides'
 ];
 
+const descriptions = [
+  'curry is super great',
+  'has peanuts',
+  'has chicken',
+  'to share',
+  ''
+]
+
 console.log('inside categoriesFixtures', categories)
 
-export default categories;
+module.exports = {
+  'categories': categories,
+  'descriptions': descriptions
+};
