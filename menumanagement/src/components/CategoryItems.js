@@ -1,5 +1,6 @@
+'use client';
 import { ItemCard } from './ItemCard';
-import styles from '../styles/CategoryItems.module.css'
+import styles from '../styles/CategoryItems.module.css';
 
 const CategoryItems = ({items}) => {
   console.log('in cat items', `${Array.isArray(items)}`);
@@ -9,7 +10,6 @@ const CategoryItems = ({items}) => {
       {items.map((item, i) => {
         return <ItemCard item={item} key={`${item.menuName} ${i}`}/>
       })}
-      {/* <ItemCard items={items} /> */}
     </div>
   )
 }

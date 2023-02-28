@@ -14,7 +14,7 @@ const OrderingApp = ({items, categories}) => {
           })
 
           return (
-            <div id={category} className={styles.categorySections}>
+            <div id={category} className={styles.categorySections} key={`header-${i}`}>
               <div>
                 <h2>{category}</h2>
               </div>
