@@ -1,4 +1,6 @@
-import styles from '../styles/ItemCard.module.css'
+'use client';
+
+import styles from '../styles/ItemCard.module.css';
 
 const ItemCard = ({item}) => {
   const description = item.description.length === 0 ? null: item.description;
