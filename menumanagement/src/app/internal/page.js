@@ -8,11 +8,11 @@ const paragraph = 'mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl
 const InternalDirectory = () => {
 
   return (
-    <div>
-    <div className={tcss.h1}>
-      Internal Directory
+    <div className="flex-col">
+    <div className="flex justify-center mt-5 ">
+      <h1 className={tcss.h1}>Internal Directory</h1>
     </div>
-    <div className="border-red-400 border-2 flex justify-center p-3">
+    <div className="border-2 flex justify-center p-3">
       <AddItemForm />
     </div>
     </div>
