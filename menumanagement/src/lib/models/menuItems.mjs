@@ -8,4 +8,5 @@ export const menuItemSchema = new Schema ({
   category: String
 });
 
+// solves export issue if the model already exists before creation.
 export const menuItems = mongoose.models['menuItems'] ? mongoose.model('menuItems') : mongoose.model('menuItems', menuItemSchema);
