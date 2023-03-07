@@ -1,15 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 // import { editMenu } from '../pages/api/menu';
-
-const itemsCategories = [
-  'Appetizers',
-  'Chicken',
-  'Beef',
-  'Drinks',
-  'Stir Fry',
-  'Rice'
-];
+import { categories } from '../lib/categoryFixtures';
 
 const formFieldStyle = 'lg:max-w-md w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600';
 const labelText = 'lg:min-w-[20%] text-sm font-medium text-gray-500 text-sm lg:text-base';
@@ -28,7 +20,7 @@ const AddItemForm = () => {
   //TODO: abstract function that calls the function, and provides field name
   //Uses Switch Statement to update specific fields (choosing this over storing properties in an object to prevent repeat rendering
   const handleChange = (e) => {
-    console.log('whats the name and val', e.target.name, e.target.value)
+    // console.log('whats the name and val', e.target.name, e.target.value)
     const { name, value } = e.target;
     switch (name) {
       case 'itemName': {
@@ -60,7 +52,7 @@ const AddItemForm = () => {
 
   }
 
-  //TODO: handle submission of form
+  // Posts entry to database without validation of whether a similar entry already exists
   const handleSummit = async (e) => {
     e.preventDefault();
 
@@ -79,6 +71,8 @@ const AddItemForm = () => {
         price: price
       })
     })
+
+    // TODO: return success or error message back to the front end by setting the form result as a state
   };
 
   return (
@@ -129,7 +123,7 @@ const AddItemForm = () => {
           >
               <option value={null} disabled selected>Select Category</option>
               {
-                itemsCategories.map((category, i) => {
+                categories.map((category, i) => {
                   return <option value={category} key={`${category}`}>{category}</option>
                 })
               }

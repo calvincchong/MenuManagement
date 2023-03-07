@@ -15,6 +15,7 @@ export default async function editMenu(req, res) {
       catch (error) {
         res.status(400).json({ success: false });
       }
+      break;
     }
     case 'POST': {
       try {
@@ -26,6 +27,7 @@ export default async function editMenu(req, res) {
       catch (error) {
         res.status(400).json({ success: false });
       }
+      break;
     }
   }
 
