@@ -20,7 +20,7 @@ const AddItemForm = () => {
   //TODO: abstract function that calls the function, and provides field name
   //Uses Switch Statement to update specific fields (choosing this over storing properties in an object to prevent repeat rendering
   const handleChange = (e) => {
-    console.log('whats the name and val', e.target.name, e.target.value)
+    // console.log('whats the name and val', e.target.name, e.target.value)
     const { name, value } = e.target;
     switch (name) {
       case 'itemName': {
@@ -71,6 +71,8 @@ const AddItemForm = () => {
         price: price
       })
     })
+
+    // TODO: return success or error message back to the front end by setting the form result as a state
   };
 
   return (
