@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import menuSlice from './reducers/menu';
+import menuCategoryReducer from './reducers/menuCategorySlice';
 
 const store = configureStore({
   reducer: {
-    menu: menuSlice
-  }
+    menuCategory: menuCategoryReducer,
+  },
 })
 
 export default store;
