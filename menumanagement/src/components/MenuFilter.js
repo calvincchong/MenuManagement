@@ -7,43 +7,37 @@ const MenuFilter = ({ categories }) => {
   const selectedCategory = useSelector((state) => state.menuCategory);
   const dispatch = useDispatch();
 
-  return (
-  <div className="w-4/12 flex-col">
-    menu filter
-    <div>
+  console.log('is categories passed', categories)
 
-    this is the selected category: {selectedCategory.value}
+  return (
+  <div className="w-4/12 flex-col m-3">
+    <h3>Categories</h3>
+    <div>
+    Selected category: {selectedCategory.value}
     </div>
 
-    <label>
-      Appetizers
+    {categories.map((category, i) => {
+      return(
+      <div key={`cSelect_${category}`}>
+        <input
+          type="checkbox"
+          name={category}
+          value={category}
+          checked= {selectedCategory.value === category ? true : false}
+          onChange={(e) => {
+            if (selectedCategory.value === e.target.name) {
+              dispatch(selectCategory('All Items'))
+            } else {
+              dispatch(selectCategory(e.target.name))
+            }
+          }}
+        />
 
-      <input
-        type="checkbox"
-        name="category"
-        value="Appetizers"
-        onClick={() => dispatch(selectCategory('Appetizers'))}
-      />
-    </label>
-
-    <label>
-      Soups To Share
-
-      <input
-        type="checkbox"
-        name="soupstoshare"
-        value="soupstoshare"
-        checked= {selectedCategory.value === 'soupstoshare' ? true : false}
-        // onClick={(e) => dispatch(selectCategory(e.name))}
-        onChange={(e) => {
-          if (selectedCategory.value === e.target.name) {
-            dispatch(selectCategory('All Items'))
-          } else {
-            dispatch(selectCategory(e.target.name))
-          }
-        }}
-      />
-    </label>
+        <label>
+          {category}
+        </label>
+      </div>)
+    })}
   </div>)
 }
 

@@ -11,7 +11,7 @@ const OrderingApp = ({items, categories}) => {
 
   return (
     <div className='flex flex-row'>
-    <MenuFilter />
+    <MenuFilter categories={categories} />
     <div className="w-8/12">
         {categories.map((category, i) => {
           const itemsByCategory = items.filter(item => {
