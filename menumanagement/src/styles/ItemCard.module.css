@@ -1,8 +1,7 @@
 .box {
-  background-color: rgba(247, 185, 109, 0.143);
+  background-color: rgba(255, 228, 196, 0.143);
   border-color: grey;
-  padding: 0.5em;
-  /*
+  /* padding: 0.5em;
   margin-bottom: 20px;
   gap: 10px; */
   display: inline-grid;
@@ -34,5 +33,4 @@
   grid-column-start: -4;
   grid-column-end: -1;
   padding: .2em;
-  font-size: 0.75rem;
 }
