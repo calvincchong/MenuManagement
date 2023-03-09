@@ -8,6 +8,13 @@
   display: inline-grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.box:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .menuName {
@@ -35,4 +42,17 @@
   grid-column-end: -1;
   padding: .2em;
   font-size: 0.75rem;
+}
+
+.cartButton {
+  position: absolute;
+  z-index: 5;
+  right: 0.25rem;
+  bottom: 0.25rem;
+  color: orange;
+  font-size: 2rem;
+}
+
+.cartButton:hover {
+  color: rgb(255, 184, 51);
 }
