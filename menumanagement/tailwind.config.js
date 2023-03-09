@@ -622,6 +622,8 @@ module.exports = {
       0: '0px',
       full: '100%',
       screen: '100vh',
+      xxvh: '20vh',
+      'xxxvh': '30vh',
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
