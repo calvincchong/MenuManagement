@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// 'All Items' is fake category that will be used to display all items menuFilter uses this.
 const initialState ={
-  value: '',
+  value: 'All Items',
 }
 
 const menuCategorySlice = createSlice({
