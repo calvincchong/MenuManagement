@@ -4,6 +4,7 @@ import { CategoryItems } from '../../components/CategoryItems';
 import { ItemCard } from '../../components/ItemCard';
 import OrderingApp from '../../components/OrderingApp'
 import MenuLink from '../../components/MenuLink';
+import NavBar from '../../components/NavBar';
 import styles from './page.module.css';
 import Link from 'next/link';
 
@@ -26,6 +27,7 @@ const Menu = async () => {
 
   return (
     <div className={styles.menu}>
+      <NavBar />
       <h1> Koo Koo Chicken Menu </h1>
       <MenuLink categories={categories} />
       <OrderingApp items={items} categories={categories} />
