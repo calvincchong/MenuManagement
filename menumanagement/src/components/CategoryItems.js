@@ -3,7 +3,7 @@ import { ItemCard } from './ItemCard';
 import styles from '../styles/CategoryItems.module.css';
 
 const CategoryItems = ({items}) => {
-  console.log('in cat items', `${Array.isArray(items)}`);
+  // console.log('in cat items', `${Array.isArray(items)}`);
 
   return (
     <div className={styles.twoCol}>

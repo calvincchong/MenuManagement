@@ -16,8 +16,6 @@ const ItemCard = ({item}) => {
         <p className={styles.description}>{description}</p>
         <IoAddCircleSharp className={styles.cartButton} />
       </div>
-
-
   )
 }
 
