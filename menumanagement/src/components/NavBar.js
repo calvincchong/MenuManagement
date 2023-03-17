@@ -1,6 +1,11 @@
-import { FaShoppingCart } from 'react-icons/fa'
+'use client';
+import { FaShoppingCart } from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import {toggleCart} from '../store/reducers/cartSlice';
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="position:fixed flex flex-wrap justify-between space-x-4 mx-auto max-w-screen-xl max-hd-[40px] rop-shadow-sm border-blue-50 border-b-2">
      <div> Koo Koo Logo </div>
@@ -9,7 +14,9 @@ const NavBar = () => {
         <li>Menu</li>
         <li>About</li>
       </ul>
-     <div className="p-2 relative">
+     <div className="p-2 relative"
+      onClick={() => dispatch(toggleCart())}
+     >
       <FaShoppingCart className="text-orange-400 text-3xl"/>
       <div className="z-10 absolute bottom-1 left-1 text-center text-xs text-black bg-orange-200 rounded-full min-w-[1.5rem] min-h-[1.5rem] drop-shadow-sm">
         <p className="align-text-middle p-1">12</p>
