@@ -2,6 +2,7 @@
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import {toggleCart} from '../store/reducers/cartSlice';
+import ShoppingCart from './ShoppingCart';
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -14,14 +15,7 @@ const NavBar = () => {
         <li>Menu</li>
         <li>About</li>
       </ul>
-     <div className="p-2 relative"
-      onClick={() => dispatch(toggleCart())}
-     >
-      <FaShoppingCart className="text-orange-400 text-3xl"/>
-      <div className="z-10 absolute bottom-1 left-1 text-center text-xs text-black bg-orange-200 rounded-full min-w-[1.5rem] min-h-[1.5rem] drop-shadow-sm">
-        <p className="align-text-middle p-1">12</p>
-      </div>
-     </div>
+      <ShoppingCart />
     </div>
   )
 }
