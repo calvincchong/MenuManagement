@@ -8,16 +8,15 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
   const [numberOfItems, setNumberOfItems] = useState('');
 
+  // determines number of items to set in the cart and adds event listener for future changes
   useEffect(() => {
     let num = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : 0;
     setNumberOfItems(num);
 
+    // Listen for addItemToCart event
     window.addEventListener('addItemToCart', () => {
       const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
-      console.log('inside shopping cart useffect', items);
-      // numberOfItems = items.length || 0;
       setNumberOfItems(items.length || 0);
-      console.log('shoppingCart', numberOfItems)
     })
   }, []);
 

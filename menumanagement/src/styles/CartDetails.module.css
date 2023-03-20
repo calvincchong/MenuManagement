@@ -1,0 +1,51 @@
+.cartCard {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - .5em));
+  grid-gap: .2em .5em;
+  /* top: 30px; */
+  border-top: solid 1px;
+  border-top-color: beige;
+  padding: 1rem;
+  margin-top: .2rem;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #fefdf9;
+  border-radius: 6px;
+}
+
+.cartCard:hover {
+  background-color: #ffbd6b;
+}
+
+.menuName {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  /* margin-left: .2em;
+  margin-top: .2em; */
+  font-size: 1.2rem;
+}
+
+.quantity {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column: 2;
+  /* grid-column-end: 2; */
+  vertical-align: middle;
+  justify-content: center;
+  margin: auto;
+}
+
+.price {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column: 1;
+  grid-column-end: 1;
+}
+
+.adjustQuantityDiv {
+  margin: auto 2px auto 2px;
+  padding: 0 2px 0 2px;
+}

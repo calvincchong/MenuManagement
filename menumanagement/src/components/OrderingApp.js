@@ -6,6 +6,7 @@ import styles from '../styles/OrderingApp.module.css';
 import tcss from '../styles/globaltailwind';
 import MenuFilter from './MenuFilter';
 import Slideout from './Slideout';
+import CartDetails from './CartDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../store/reducers/menuCategorySlice';
 import { toggleCart } from '../store/reducers/cartSlice';
@@ -64,12 +65,12 @@ const OrderingApp = ({items, categories}) => {
       </div>
       {isShowCart.value ?
         (<>
-          <Slideout> {<div>passed wrapper</div>} </Slideout>
+          <Slideout> {<CartDetails />} </Slideout>
           <div className='w-1/3 ml-10'></div>
         </>)
         // <div className='w-1/3'> move stuff </div> :
         :
-        <div>show cart false</div>
+        null
       }
     </div>
 
