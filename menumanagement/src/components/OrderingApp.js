@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { CategoryItems } from './CategoryItems';
 import { ItemCard } from './ItemCard';
 import styles from '../styles/OrderingApp.module.css';
@@ -10,6 +10,7 @@ import CartDetails from './CartDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../store/reducers/menuCategorySlice';
 import { toggleCart } from '../store/reducers/cartSlice';
+import { useTransition, useSpring, animated, config, useSpringRef } from '@react-spring/web';
 
 const headerTCSS = "flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20"
 
@@ -18,6 +19,31 @@ const OrderingApp = ({items, categories}) => {
   const selectedCategory = useSelector((state) => state.menuCategory);
   const isShowCart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const transRef = useSpringRef();
+  const trans = useTransition([isShowCart], {
+    ref: transRef,
+    keys: null,
+    from: {
+      opacity: .5,
+      transform: `scale(${0.9})`,
+      transformOrigin: 'top right'
+    },
+    enter: {
+      opacity: 1,
+      transform: `scale(${1})`,
+    },
+    leave: {
+      opacity: 0,
+      transform: `scale(${0.9})`,
+    },
+    config: config.wobble
+  });
+
+  useEffect(() => {
+    transRef.start()
+  }, [isShowCart]);
+
+
 
   const filterCategories = (category) => {
     if (selectedCategory.value === 'All Items') {
@@ -64,16 +90,16 @@ const OrderingApp = ({items, categories}) => {
          })}
       </div>
       {isShowCart.value ?
-        (<>
-          <Slideout> {<CartDetails />} </Slideout>
+        <>
+          {trans((style, item) =>
+            <Slideout> <animated.div style={style}> {<CartDetails />} </animated.div> </Slideout>
+          )}
           <div className='w-1/3 ml-10'></div>
-        </>)
-        // <div className='w-1/3'> move stuff </div> :
+        </>
         :
         null
       }
     </div>
-
     </>
   )
 }

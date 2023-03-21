@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@react-spring/web": "^9.7.1",
     "@reduxjs/toolkit": "^1.9.3",
     "bcrypt": "^5.1.0",
     "class-variance-authority": "0.4.0",

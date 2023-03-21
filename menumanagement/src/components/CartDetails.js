@@ -19,7 +19,25 @@ const CartDetails = () => {
 
   const groups = cart.length === 0 ? [] : _.groupBy(cart, 'menuName');
 
-  // console.log('this is the cart and groups', cart, groups, Object.keys(groups));
+  /**
+   * @param {object} key : entire item object to add to cart
+   * @returns {void} : sideeffect updates cart state and localstorage with additional item
+   */
+  const incrementItem = ( key ) => {
+    setCart([...cart, key]);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
+
+  /**
+   * @param {object} key : entire item object to add to cart
+   * @returns {void} : sideeffect removes item from updates cart state and localstorage. CartState triggers re-render.
+   */
+  const decrementItem = ( key ) => {
+    let index = cart.findIndex((item) => item.menuName === key.menuName);
+    let newCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
+    localStorage.setItem('cart', JSON.stringify(newCart));
+    setCart(newCart);
+  };
 
   return (
     <>
@@ -29,7 +47,7 @@ const CartDetails = () => {
       {Object.keys(groups)
         .map((key, i) => {
           return (
-            <div className={styles.cartCard}>
+            <div key={'cartitem'+key} className={styles.cartCard}>
               {/* <div className="flex-col w-8/12 basis-8/12"> */}
                 <div className={styles.menuName}>{key}</div>
                 <div className={styles.price}>
@@ -37,17 +55,26 @@ const CartDetails = () => {
                 </div>
               {/* </div> */}
               <div className={styles.quantity}>
-                <div className="flex-row flex align-middle border-r-emerald-400 rounded-full border-2">
-                  <div className={styles.adjustQuantityDiv}><HiChevronDown /></div>
+                <div className="flex-row flex align-middle border-slate-200 rounded-full border-2 hover:bg-orange-100">
+                  <div
+                    className={styles.adjustQuantityDiv}
+                    onClick={() => {decrementItem(groups[key][0])}}
+                  >
+                    <HiChevronDown />
+                  </div>
                   <div className="text-lg">{groups[key].length}</div>
-                  <div className={styles.adjustQuantityDiv}><HiChevronUp /></div>
+                  <div
+                    className={styles.adjustQuantityDiv}
+                    onClick={() => {incrementItem(groups[key][0])}}
+                  >
+                    <HiChevronUp />
+                  </div>
                 </div>
               </div>
             </div>
           )
         })
       }
-
     </>
   )
 }
