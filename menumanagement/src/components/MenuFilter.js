@@ -6,8 +6,6 @@ const MenuFilter = ({ categories }) => {
   const selectedCategory = useSelector((state) => state.menuCategory);
   const dispatch = useDispatch();
 
-  console.log('is categories passed', categories)
-
   return (
   <div className="w-3/12 flex-col m-3">
     <h3>Categories</h3>

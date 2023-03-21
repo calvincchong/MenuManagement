@@ -48,6 +48,8 @@ const AddItemForm = () => {
     }
   };
 
+  // Validate Form for: pricing (needs to be a valid price), itemCategory (needs to be a valid category)
+    // item name should not already exist. If it does, throw an error. Calls API to check if item name already exists in DB 10 seconds after last modification of the item name section.
   const validateForm = (e) => {
 
   }

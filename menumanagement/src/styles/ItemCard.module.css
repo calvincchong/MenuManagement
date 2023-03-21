@@ -55,4 +55,5 @@
 
 .cartButton:hover {
   color: rgb(255, 184, 51);
+  transform: scale(1.2);
 }

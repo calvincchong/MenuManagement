@@ -20,8 +20,6 @@ const descriptions = [
   ''
 ]
 
-console.log('inside categoriesFixtures', categories)
-
 module.exports = {
   'categories': categories,
   'descriptions': descriptions
