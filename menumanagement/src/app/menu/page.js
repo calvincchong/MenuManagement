@@ -28,8 +28,6 @@ const Menu = async () => {
   return (
     <div className={styles.menu}>
       <NavBar />
-      <h1> Koo Koo Chicken Menu </h1>
-      <MenuLink categories={categories} />
       <OrderingApp items={items} categories={categories} />
     </div>
   )
