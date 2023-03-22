@@ -14,7 +14,17 @@ const getMenuDataFromMongo = async () => {
     method: 'GET'
   });
 
-  const data = await res.json();
+  let data = await res.json();
+  // console.log('this is the data', data);
+  data = data.data.map(item => {
+    return {
+      menuName: `${item.name} ${item.chineseName}`,
+      description: item.description,
+      category: item.category,
+      price: item.price,
+      order: item.order
+    }
+  })
   return data;
 }
 
@@ -22,13 +32,13 @@ const menuDivStyle = "border-solid border-indigo-500 border-2";
 
 const Menu = async () => {
   const items = await getMenuFixtures(100);
-  // const databaseItems = await getMenuDataFromMongo();
-  // console.log ('databaseItems', databaseItems);
+  const databaseItems = await getMenuDataFromMongo();
+  console.log ('databaseItems retrieved in menu SSR page', typeof databaseItems);
 
   return (
     <div className={styles.menu}>
       <NavBar />
-      <OrderingApp items={items} categories={categories} />
+      <OrderingApp items={databaseItems} categories={categories} />
     </div>
   )
 }
