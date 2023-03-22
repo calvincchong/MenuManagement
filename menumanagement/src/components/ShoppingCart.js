@@ -10,7 +10,7 @@ const ShoppingCart = () => {
 
   // determines number of items to set in the cart and adds event listener for future changes
   useEffect(() => {
-    let num = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : 0;
+    let num = localStorage.getItem('cart') !== 'undefined' ? JSON.parse(localStorage.getItem('cart')).length : 0;
     setNumberOfItems(num);
 
     // Listen for addItemToCart event

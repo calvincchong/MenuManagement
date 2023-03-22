@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../store/reducers/menuCategorySlice';
 import { toggleCart } from '../store/reducers/cartSlice';
 import { useTransition, useSpring, animated, config, useSpringRef } from '@react-spring/web';
+// import Message from './AddToCartNotification';
 
 const headerTCSS = "flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20"
 
@@ -26,23 +27,22 @@ const OrderingApp = ({items, categories}) => {
     from: {
       opacity: .5,
       transform: `scale(${0.9})`,
-      transformOrigin: 'top right'
+      // transformOrigin: 'top right'
     },
     enter: {
       opacity: 1,
       transform: `scale(${1})`,
     },
-    leave: {
-      opacity: 0,
-      transform: `scale(${0.9})`,
-    },
+    // leave: {
+    //   opacity: 0,
+    //   transform: `scale(${0.9})`,
+    // },
     config: config.wobble
   });
 
   useEffect(() => {
     transRef.start()
   }, [isShowCart]);
-
 
 
   const filterCategories = (category) => {
@@ -69,9 +69,10 @@ const OrderingApp = ({items, categories}) => {
         </div>
       </div>
     </div>
+
     <div className={isShowCart ? 'flex flex-row py-3 w-8/12 mx-auto max-w-screen-xl' : 'flex flex-row py-3 max-w-screen-xl mx-auto'}>
       <MenuFilter categories={categories} />
-      <div className='w-9/12'>
+      <div className='w-10/12'>
          {categories.filter(filterCategories).map((category, i) => {
 
           const itemsByCategory = items.filter(item => {
@@ -89,16 +90,35 @@ const OrderingApp = ({items, categories}) => {
           )
          })}
       </div>
+
       {isShowCart.value ?
         <>
           {trans((style, item) =>
-            <Slideout> <animated.div style={style}> {<CartDetails />} </animated.div> </Slideout>
+             <animated.div
+              // className="static slideout fixed z-10 top-0 right-0 w-1/3 h-screen bg-white-800 opacity-99 shadow-2xl backdrop-blur-3xl p-4"
+              style={{
+                zIndex: 1000,
+                position: 'absolute',
+                backgroundColor: 'white',
+                height: '98vh',
+                filter: 'drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))',
+                right: '0',
+                width: '100%',
+                maxWidth: '30vw',
+                padding: '1rem',
+                top: '0',
+                margin: '5px',
+                ...style}}
+              >
+              {<Slideout>{<CartDetails />}</Slideout>}
+              </animated.div>
           )}
-          <div className='w-1/3 ml-10'></div>
+          <div className='w-[20vw]'></div>
         </>
         :
         null
       }
+
     </div>
     </>
   )

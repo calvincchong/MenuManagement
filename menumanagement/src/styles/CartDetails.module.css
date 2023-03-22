@@ -1,18 +1,21 @@
 .cartCard {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(2, calc(50% - .5em));
-  grid-gap: .2em .5em;
+  /* grid-template-columns: repeat(2, calc(50% - .5em), 1fr); */
+  grid-template-columns: repeat(2, 2fr, 1fr);
+  grid-gap: .3rem;
   /* top: 30px; */
   border-top: solid 1px;
   border-top-color: beige;
-  padding: 1rem;
+  padding: .75rem;
   margin-top: .2rem;
   margin-bottom: .5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   background-color: #fefdf9;
   border-radius: 6px;
+  justify-content: space-between;
+  /* box-shadow: 1px -1px .3 #ffaa3477; */
 }
 
 /* .cartCard:hover {
@@ -26,7 +29,7 @@
   grid-column-end: 1;
   /* margin-left: .2em;
   margin-top: .2em; */
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 
 .quantity {
