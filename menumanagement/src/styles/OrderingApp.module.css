@@ -1,3 +1,4 @@
+/*Container for each Categories on initial load*/
 .categorySections {
   /* justify-content: center; */
   /* border-color: rgba(69, 69, 206, 0.587);
@@ -12,7 +13,96 @@
   justify-content: center;
   align-items: center;
 }
-/*
-.menuSection {
-  top: 30px;
-} */
+
+/**
+  * @description: Responsible for <Slideout /> after animations are rendered -
+  * styling for animation lives in OrderingApp component as of 3.22.2023
+  */
+.slideout {
+  z-index: 1000;
+  position: fixed;
+  background-color: white;
+  height: 98vh;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  width: 100%;
+  max-width: 30vw;
+  padding: 1rem;
+  margin: 5px;
+  top: 0;
+  right: 0;
+}
+
+/**
+  * for category & category Selection Box when cart is not expanded
+  * in tCSS: flex flex-row py-3 w-8/12 mx-auto max-w-screen-xl
+  */
+.menuContainerWithCart {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto;
+  padding-left: 0.75rem; /* 12px */
+  padding-right: 0.75rem; /* 12px */
+  width: 66.666667%;; /* 8/12 */
+  max-width: 1280px; /* max-w-screen-xl*/;
+  /* align-items: center;
+  width: 100%;
+  height: 100%; */
+}
+
+/**
+  * for category & category Selection Box when cart is expanded
+  * in tCSS: flex flex-row py-3 max-w-screen-xl mx-auto
+  */
+.menuContainerWithoutCart {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  max-width: 1280px;
+}
+
+/**
+ * @media queries for mobile devices
+ */
+@media (max-device-width: 500px) {
+  .categorySections {
+    margin: 12px;
+  }
+
+  .slideout {
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-width: 90vw;
+    margin: 10px;
+  }
+}
+
+@media (max-device-width: 950px) {
+  .categorySections {
+    margin: 12px;
+  }
+
+  /* .slideout {
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-width: 90vw;
+    margin: 10px;
+  } */
+
+  .menuContainerWithCart {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0.75rem;
+    width: 100%;
+    max-width: 1280px;
+  }
+}

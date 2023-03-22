@@ -7,10 +7,10 @@ const MenuFilter = ({ categories }) => {
   const dispatch = useDispatch();
 
   return (
-  <div className="w-3/12 flex-col m-3">
+  <div className='w-3/12 flex-col m-3 sticky top-0 self-start'>
     <h3>Categories</h3>
     <div>
-    Selected category: {selectedCategory.value}
+      Selected category: {selectedCategory.value}
     </div>
 
     <div>
