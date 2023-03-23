@@ -40,7 +40,8 @@ const removeFromCartAndSetStorage  = ( key, cart ) => {
  */
 const addItemToCartAndSetStorage = (item, cart = []) => {
   if (typeof window !== 'undefined') {
-    let newCart = cart || localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
+    let cartFromStorage = localStorage.getItem('cart');
+    let newCart = cartFromStorage !== undefined & cartFromStorage !== null ? JSON.parse(cartFromStorage) : [];
     newCart = [...newCart, item];
     localStorage.setItem('cart', JSON.stringify(newCart));
     window.dispatchEvent(new Event('addItemToCart')); // Mechanism to update cart displaying number of items

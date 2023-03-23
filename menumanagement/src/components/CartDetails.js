@@ -14,12 +14,12 @@ const CartDetails = () => {
     setCart(storedCart);
 
     window.addEventListener('addItemToCart', () => {
-      const items = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : 0;
+      const items = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
       setCart(items || []);
     })
   }, []);
 
-  const groups = cart.length === 0 ? [] : _.groupBy(cart, 'menuName');
+  const groups = cart === null ? [] : _.groupBy(cart, 'menuName');
 
   /**
    * @param {object} key : entire item object to add to cart
@@ -51,14 +51,16 @@ const CartDetails = () => {
   //   return acc + item.price;
   // }, 0).toFixed(2);
 
-  const orderTotal = calculateCart.total(cart);
+  const orderTotal = cart !== null && cart !== undefined ? calculateCart.preTax(cart) : 0;
   const tax = (orderTotal * 0.0875).toFixed(2);
   const afterTax = (orderTotal * 1.0875).toFixed(2);
+
+
 
   return (
     <>
       <div className="text-2xl">Cart</div>
-      <div> Total Items: <span className="text-xl">{cart.length}</span></div>
+      <div> Total Items: <span className="text-xl">{cart ?  cart.length : 0}</span></div>
 
       <div className="flex-col flex overflow-auto max-h-7vh appearance-none">
       {Object.keys(groups)

@@ -9,14 +9,14 @@ import { addItemToCartAndSetStorage } from '../lib/controllers/calculateCart';
 const ItemCard = ({item}) => {
   const description = item.description.length === 0 ? null: item.description;
 
-  // const addItemToLocalStorage = () => {
-  //   if (typeof window !== 'undefined') {
-  //     let cart = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
-  //     [...cart, item];
-  //     localStorage.setItem('cart', JSON.stringify(cart));
-  //     window.dispatchEvent(new Event('addItemToCart')); // Mechanism to update cart displaying number of items
-  //   }
-  // }
+  const addItemToLocalStorage = () => {
+    if (typeof window !== 'undefined') {
+      let cart = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
+      [...cart, item];
+      localStorage.setItem('cart', JSON.stringify(cart));
+      window.dispatchEvent(new Event('addItemToCart')); // Mechanism to update cart displaying number of items
+    }
+  }
 
   return (
       <div className={styles.box}>
