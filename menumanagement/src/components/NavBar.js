@@ -1,0 +1,28 @@
+'use client';
+import { FaShoppingCart } from 'react-icons/fa';
+import { useSelector, useDispatch } from 'react-redux';
+import {toggleCart} from '../store/reducers/cartSlice';
+import ShoppingCart from './ShoppingCart';
+import Link from 'next/link';
+
+const NavBar = () => {
+  const dispatch = useDispatch();
+
+  return (
+    <div className="flex flex-wrap justify-between space-x-4 mx-auto max-w-screen-xl max-hd-[40px] drop-shadow-sm border-blue-50 border-b-2">
+     <div> Koo Koo Logo </div>
+      <ul className="flex mt-2 font-medium flex-row lg:space-x-4 lg:mt-0 py-2 space-x-4">
+        <li>
+          <Link href='/'>Home</Link>
+        </li>
+        <li>
+          <Link href='/menu'>Menu</Link>
+        </li>
+        <li>About</li>
+      </ul>
+      <ShoppingCart />
+    </div>
+  )
+}
+
+export default NavBar;

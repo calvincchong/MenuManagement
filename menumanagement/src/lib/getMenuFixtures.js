@@ -1,8 +1,5 @@
 import { categories, descriptions } from './categoryFixtures';
 
-console.log(categories);
-console.log('this is descriptions', descriptions);
-
 const delay = (time) => {
   return new Promise(() => {
     setTimeout(() => {

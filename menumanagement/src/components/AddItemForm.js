@@ -16,6 +16,7 @@ const AddItemForm = () => {
   const [fields, setFields] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errors, setErrors] = useState({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
   //TODO: abstract function that calls the function, and provides field name
   //Uses Switch Statement to update specific fields (choosing this over storing properties in an object to prevent repeat rendering
@@ -48,12 +49,14 @@ const AddItemForm = () => {
     }
   };
 
+  // Validate Form for: pricing (needs to be a valid price), itemCategory (needs to be a valid category)
+    // item name should not already exist. If it does, throw an error. Calls API to check if item name already exists in DB 10 seconds after last modification of the item name section.
   const validateForm = (e) => {
 
   }
 
   // Posts entry to database without validation of whether a similar entry already exists
-  const handleSummit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     //TODO: validate form and throw error if any of the fields are not filled out or doesn't match regex rules
@@ -68,17 +71,22 @@ const AddItemForm = () => {
         chineseName: itemChineseName,
         description: itemDescription,
         category: itemCategory,
+        order: 0,
         price: price
       })
     })
 
+    let data = await res.json();
+
+    console.log('wat is res', data);
     // TODO: return success or error message back to the front end by setting the form result as a state
   };
+
 
   return (
   <div className="flex-row justify-center w-6/12 max-w-lg drop-shadow-sm backdrop-blur-sm">
     <div className="border-2 border-orange-100 p-4">
-      <form onSubmit={handleSummit}>
+      <form onSubmit={handleSubmit}>
        <div className="flex justify-center space-x-4 m-2">
          <label className={labelText}>Menu Item</label>
          <input className={formFieldStyle}
@@ -144,6 +152,8 @@ const AddItemForm = () => {
         Submit
        </button>
       </form>
+             {/* <button onClick={() => {setIsSubmitting(true)}}> SUBMIT 2 </button> */}
+
     </div>
   </div>)
 }
