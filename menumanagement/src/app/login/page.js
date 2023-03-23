@@ -4,3 +4,5 @@ const Login = () => {
     <div>Internal Directory</div>
   )
 }
+
+export default Login;

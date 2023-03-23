@@ -18,7 +18,7 @@ const MenuFilter = ({ categories }) => {
   return (
   <div
     // className='w-12/12 sm:w-3/12 flex-col m-3 sticky top-0 self-start bg-white overflow-auto h-fit'
-    className='sticky top-0 bg-white z-20 opacity-100 mt-4'
+    className='sticky top-0 bg-white z-20 opacity-100 mt-4 mr-0 sm:mr-4'
   >
     <div className='text-xs sm:text-m'>
       Selected category: {selectedCategory.value}
