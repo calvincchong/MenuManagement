@@ -3,30 +3,31 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/CartDetails.module.css';
 import { HiChevronUp , HiChevronDown } from 'react-icons/hi2';
 import { MdRemoveShoppingCart } from "react-icons/md";
+import { calculateCart , removeFromCartAndSetStorage , addItemToCartAndSetStorage , removeAllOfOneItemFromCart } from '../lib/controllers/calculateCart';
 import _ from 'lodash';
 
 const CartDetails = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    let storedCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    let storedCart = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
     setCart(storedCart);
 
     window.addEventListener('addItemToCart', () => {
-      const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
+      const items = localStorage.getItem('cart') !== undefined ? JSON.parse(localStorage.getItem('cart')) : [];
       setCart(items || []);
     })
   }, []);
 
-  const groups = cart.length === 0 ? [] : _.groupBy(cart, 'menuName');
+  const groups = cart === null ? [] : _.groupBy(cart, 'menuName');
 
   /**
    * @param {object} key : entire item object to add to cart
    * @returns {void} : sideeffect updates cart state and localstorage with additional item
    */
   const incrementItem = ( key ) => {
+    addItemToCartAndSetStorage(key, cart);
     setCart([...cart, key]);
-    localStorage.setItem('cart', JSON.stringify(cart));
   };
 
   /**
@@ -35,48 +36,61 @@ const CartDetails = () => {
    * should remove the index of last matching item.
    */
   const decrementItem = ( key ) => {
-    let index = cart.findLastIndex((item) => item.menuName === key.menuName);
-    let newCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
+    let newCart = removeFromCartAndSetStorage(key, cart);
     localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
   };
 
-  const orderTotal = cart.reduce((acc, item) => {
-    return acc + parseInt(item.price.substring(1));
-  }, 0).toFixed(2);
+  const removeItem = ( key ) => {
+    let newCart = removeAllOfOneItemFromCart(key, cart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
+    setCart(newCart);
+  };
 
+  // const orderTotal = cart.reduce((acc, item) => {
+  //   return acc + item.price;
+  // }, 0).toFixed(2);
+
+  const orderTotal = cart !== null && cart !== undefined ? calculateCart.preTax(cart) : 0;
+  const tax = (orderTotal * 0.0875).toFixed(2);
   const afterTax = (orderTotal * 1.0875).toFixed(2);
+
+
 
   return (
     <>
       <div className="text-2xl">Cart</div>
-      <div> Total Items: <span className="text-xl">{cart.length}</span></div>
+      <div> Total Items: <span className="text-xl">{cart ?  cart.length : 0}</span></div>
 
       <div className="flex-col flex overflow-auto max-h-7vh appearance-none">
       {Object.keys(groups)
         .map((key, i) => {
+          const itemQuantity = groups[key].length;
+          const item = groups[key][0];
+          const itemPrice = groups[key][0]['price'];
+
           return (
             <div key={'cartitem'+key} className={styles.cartCard}>
 
               {/* <div className="flex-col w-8/12 basis-8/12"> */}
-                <div className={styles.removeItemButton}><MdRemoveShoppingCart /></div>
+                <div className={styles.removeItemButton} onClick={() => {removeItem(item)}}><MdRemoveShoppingCart /></div>
                 <div className={styles.menuName}>{key}</div>
                 <div className={styles.price}>
-                <span className="">${parseInt(groups[key][0]['price'].substring(1)) * groups[key].length}</span>
+                <span className="">${(itemPrice * itemQuantity).toFixed(2)}</span>
                 </div>
               {/* </div> */}
               <div className={styles.quantity}>
                 <div className="flex-row flex align-middle border-slate-200 rounded-full border-2 hover:bg-orange-100">
                   <div
                     className={styles.adjustQuantityDiv}
-                    onClick={() => {decrementItem(groups[key][0])}}
+                    onClick={() => {decrementItem(item)}}
                   >
                     <HiChevronDown />
                   </div>
                   <div className="text-lg">{groups[key].length}</div>
                   <div
                     className={styles.adjustQuantityDiv}
-                    onClick={() => {incrementItem(groups[key][0])}}
+                    onClick={() => {incrementItem(item)}}
                   >
                     <HiChevronUp />
                   </div>
@@ -87,20 +101,22 @@ const CartDetails = () => {
         })
       }
       </div>
-      <div className="min-h-xxxvh">
+      <div className="min-h-xxxvh px-4 border-t border-1 border-color-[#ffaa3477]">
         <table className="table border-spacing-y-3 w-full">
-          <tr className="border-t border-1 border-cyan-100">
-            <td>Estimated Pretax </td>
-            <td>${orderTotal}</td>
-          </tr>
-          <tr>
-            <td>Tax</td>
-            <td>${(orderTotal * 0.0875).toFixed(2)}</td>
-          </tr>
-          <tr>
-            <td>Estimated Total </td>
-            <td> ${afterTax}</td>
-          </tr>
+          <tbody>
+            <tr >
+              <td>Estimated Pretax </td>
+              <td className="float-right">${orderTotal}</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td className="float-right">${(orderTotal * 0.0875).toFixed(2)}</td>
+            </tr>
+            <tr>
+              <td>Estimated Total </td>
+              <td className="float-right"> ${afterTax}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </>

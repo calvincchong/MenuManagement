@@ -10,14 +10,17 @@ const ShoppingCart = () => {
 
   // determines number of items to set in the cart and adds event listener for future changes
   useEffect(() => {
-    let num = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : 0;
-    setNumberOfItems(num);
+    if (typeof window !== 'undefined') {
+      let num = localStorage.getItem('cart') !== 'undefined' && localStorage.getItem('cart') !== null ? JSON.parse(localStorage.getItem('cart')).length : 0;
+      setNumberOfItems(num);
+      // localStorage.setItem('cart', JSON.stringify(num));
 
-    // Listen for addItemToCart event
-    window.addEventListener('addItemToCart', () => {
-      const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
-      setNumberOfItems(items.length || 0);
-    })
+      // Listen for addItemToCart event
+      window.addEventListener('addItemToCart', () => {
+        const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
+        setNumberOfItems(items.length || 0);
+      })
+    }
   }, []);
 
   return (

@@ -5,7 +5,8 @@ export const menuItemSchema = new Schema ({
   chineseName: String,
   description: String,
   price: Number,
-  category: String
+  category: String,
+  order: Number
 });
 
 // solves export issue if the model already exists before creation.
