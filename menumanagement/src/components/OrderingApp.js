@@ -73,7 +73,7 @@ const OrderingApp = ({items, categories}) => {
 
     <div className={isShowCart ? styles.menuContainerWithCart : styles.menuContainerWithoutCart}>
       <MenuFilter categories={categories} />
-      <div className='w-10/12'>
+      <div className='w-12/12 sm:w-9/12 md:w-9/12'>
          {categories.filter(filterCategories).map((category, i) => {
 
           const itemsByCategory = items.filter(item => {
