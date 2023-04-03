@@ -10,7 +10,10 @@ import Link from 'next/link';
 
 // fetch data from menu api here
 const getMenuDataFromMongo = async () => {
-  const res = await fetch('http://localhost:3000/api/menu', {
+  // const res = await fetch('http://localhost:3000/api/menu', {
+  //   method: 'GET'
+  // });
+  const res = await fetch('/api/menu', {
     method: 'GET'
   });
 
