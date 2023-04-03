@@ -1,0 +1,7 @@
+# .env
+MONGODB_USERNAME=
+MONGODB_PASSWORD=
+MONGO_DB_NAME="Restaurant"
+MONGODB_URI= Must be encded
+MONGO_API_KEY=
+
