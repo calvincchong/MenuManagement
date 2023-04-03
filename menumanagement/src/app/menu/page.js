@@ -13,7 +13,7 @@ const getMenuDataFromMongo = async () => {
   // const res = await fetch('http://localhost:3000/api/menu', {
   //   method: 'GET'
   // });
-  const res = await fetch('/api/menu', {
+  const res = await fetch('/pages/api/menu', {
     method: 'GET'
   });
 
