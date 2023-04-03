@@ -19,7 +19,12 @@ const ShoppingCart = () => {
       window.addEventListener('addItemToCart', () => {
         const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
         setNumberOfItems(items.length || 0);
-      })
+      });
+
+      window.addEventListener('removeItemFromCart', () => {
+        const items = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : 0;
+        setNumberOfItems(items.length || 0);
+      });
     }
   }, []);
 

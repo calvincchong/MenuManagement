@@ -33,6 +33,7 @@ const menuDivStyle = "border-solid border-indigo-500 border-2";
 const Menu = async () => {
   const items = await getMenuFixtures(100);
   const databaseItems = await getMenuDataFromMongo();
+  // console.log(databaseItems);
   console.log ('databaseItems retrieved in menu SSR page', typeof databaseItems);
 
   return (
