@@ -6,6 +6,7 @@ import OrderingApp from '../../components/OrderingApp'
 import MenuLink from '../../components/MenuLink';
 import NavBar from '../../components/NavBar';
 import styles from './page.module.css';
+import tcss from '../../styles/globaltailwind';
 import Link from 'next/link';
 import getMenuDBSS from '../../lib/serversideDBCalls/getMenuDBSS';
 
@@ -31,8 +32,9 @@ import getMenuDBSS from '../../lib/serversideDBCalls/getMenuDBSS';
 //   })
 //   return data;
 // }
-
+const headerTCSS = "flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20"
 const menuDivStyle = "border-solid border-indigo-500 border-2";
+
 let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
 const isMostRecentMenu = databaseItems.length > 0 ? true : false;
 databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
@@ -57,6 +59,21 @@ const Menu = async () => {
   return (
     <div className={styles.menu}>
       <NavBar />
+      <div className={headerTCSS}>
+        <div className="absolute top-1/4 text-center">
+          <div>
+            <h1 className={tcss.h1white}>
+            Our Menu
+            </h1>
+          </div>
+          <div className="text-slate-50">
+            Homemade Malaysian Food - no passport needed
+          </div>
+          <div className="text-slate-50 py-2" >
+            Call 718-827-1698 to place your order.
+          </div>
+        </div>
+      </div>
       <NotUpdatedMessage />
       <OrderingApp items={databaseItems} categories={categories} />
     </div>

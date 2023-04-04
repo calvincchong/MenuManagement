@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column;
   /* margin: .75rem; */
+  /* position: sticky; */
   position: sticky;
-  top: 0;
+  top: 60px;
   /* align-self: flex-start; */
 }
 
@@ -47,7 +48,7 @@
     flex-direction: row;
     margin: 0;
     position: sticky;
-    top: 0;
+    top: 40px;
     align-self: flex-start;
     overflow-x: auto;
     white-space: nowrap;
