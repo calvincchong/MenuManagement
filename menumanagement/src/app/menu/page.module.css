@@ -22,3 +22,8 @@
 .menuSection {
   top: 30px;
 }
+
+.notUpdatedMessage {
+  margin: 0 auto;
+  text-align: center;
+}

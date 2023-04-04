@@ -4,7 +4,7 @@ import { menuItems } from '../../lib/models/menuItems.mjs';
 export default async function editMenu(req, res) {
   const { method } = req; // GET, POST, PUT, DELETE
 
-  await db();
+  await db(); // connect to the database //not sure if this is necessary
 
   switch (method) {
     case 'GET': {
