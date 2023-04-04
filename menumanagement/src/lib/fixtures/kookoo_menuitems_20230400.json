@@ -1,0 +1,1211 @@
+[{
+  "_id": {
+    "$oid": "6419ecf39df7797889fba043"
+  },
+  "name": "Homemade Roti Canai",
+  "chineseName": "印度麵包",
+  "description": "",
+  "price": 5.95,
+  "category": "Appetizers",
+  "__v": 0,
+  "order": 1
+},{
+  "_id": {
+    "$oid": "6419ed5c9df7797889fba047"
+  },
+  "name": "Roti Telur",
+  "chineseName": "印度包加蛋",
+  "description": "",
+  "price": 7.95,
+  "category": "Appetizers",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419eddc9df7797889fba049"
+  },
+  "name": "Roti Tissue",
+  "chineseName": "印度紙巾麵包",
+  "description": "",
+  "price": 7.95,
+  "category": "Appetizers",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ee1b9df7797889fba04b"
+  },
+  "name": "Satay Chicken",
+  "chineseName": "沙爹雞",
+  "description": "6 Skewers",
+  "price": 10.95,
+  "category": "Appetizers",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ee4d9df7797889fba04d"
+  },
+  "name": "Satay Beef",
+  "chineseName": "沙爹牛",
+  "description": "6 Skewers",
+  "price": 11.95,
+  "category": "Appetizers",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ee8e9df7797889fba04f"
+  },
+  "name": "Satay Yin Yang",
+  "chineseName": "沙爹鴛鴦",
+  "description": "3 Satay Chicken Skewers, 3 Beef Satay Skewers",
+  "price": 11.95,
+  "category": "Appetizers",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ef129df7797889fba051"
+  },
+  "name": "Curry Yong Tau Foo",
+  "chineseName": "咖喱雜寶",
+  "description": "",
+  "price": 13.5,
+  "category": "Appetizers",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ef5a9df7797889fba053"
+  },
+  "name": "Koo Koo Chicken Wings",
+  "chineseName": "茨廠街炸雞",
+  "description": "",
+  "price": 11.95,
+  "category": "Appetizers",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419efcc9df7797889fba055"
+  },
+  "name": "Homemade Fried Wontons",
+  "chineseName": "炸雲吞",
+  "description": "",
+  "price": 8.95,
+  "category": "Appetizers",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f0879df7797889fba057"
+  },
+  "name": "Salt & Pepper Squid",
+  "chineseName": "椒鹽鮮魷",
+  "description": "",
+  "price": 16.95,
+  "category": "Appetizers",
+  "order": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f1019df7797889fba059"
+  },
+  "name": "Penang Lobak",
+  "chineseName": "滷肉",
+  "description": "",
+  "price": 13.95,
+  "category": "Appetizers",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f16d9df7797889fba05b"
+  },
+  "name": "Shrimp Mango Papaya Salad",
+  "chineseName": "木瓜沙拉",
+  "description": "",
+  "price": 11.95,
+  "category": "Appetizers",
+  "order": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f2159df7797889fba05d"
+  },
+  "name": "Achat",
+  "chineseName": "亞紮",
+  "description": "",
+  "price": 8.95,
+  "category": "Appetizers",
+  "order": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f35d9df7797889fba070"
+  },
+  "name": "Satay Tofu",
+  "chineseName": "沙爹豆腐",
+  "description": "",
+  "price": 9.95,
+  "category": "Appetizers",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f4a69df7797889fba087"
+  },
+  "name": "Seafood & Seaweed Soup",
+  "chineseName": "海鮮紫菜湯",
+  "description": "",
+  "price": 14.5,
+  "category": "Soups To Share",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f5a49df7797889fba089"
+  },
+  "name": "Seafood Tom Yum Soup",
+  "chineseName": "海鮮冬陰湯",
+  "description": "",
+  "price": 15.95,
+  "category": "Soups To Share",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f6229df7797889fba08c"
+  },
+  "name": "Seafood Tomato Soup",
+  "chineseName": "海鮮番茄湯",
+  "description": "",
+  "price": 14.95,
+  "category": "Soups To Share",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419f66dc10161618f409515"
+  },
+  "name": "Salted Cabbage Tofu Soup",
+  "chineseName": "酸菜豆腐湯",
+  "description": "",
+  "price": 13.95,
+  "category": "Soups To Share",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fa0ac10161618f409518"
+  },
+  "name": "Crispy Fish Head Preserved Vegetable Soup",
+  "chineseName": "酸菜魚頭湯",
+  "description": "",
+  "price": 15.95,
+  "category": "",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419faa3c10161618f40951a"
+  },
+  "name": "Hainanese Chicken (Half)",
+  "chineseName": "海南雞(半)",
+  "description": "",
+  "price": 16,
+  "category": "",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fabbc10161618f40951c"
+  },
+  "name": "Hainanese Chicken (Half)",
+  "chineseName": "海南雞(半)",
+  "description": "",
+  "price": 16,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419facbc10161618f40951e"
+  },
+  "name": "Hainanese Chicken (Half)",
+  "chineseName": "海南雞(半)",
+  "description": "",
+  "price": 16,
+  "category": "",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fbedc10161618f409520"
+  },
+  "name": "Hainanese Chicken (Half)",
+  "chineseName": "海南雞(半)",
+  "description": "",
+  "price": 16,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fcf7c10161618f409522"
+  },
+  "name": "Hainanese Chicken (Whole)",
+  "chineseName": "海南雞 (全隻)",
+  "description": "",
+  "price": 32,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd0fc10161618f409524"
+  },
+  "name": "Pattaya Chicken (1/2) ",
+  "chineseName": "芭堤雅脆皮雞",
+  "description": "",
+  "price": 19.95,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd22c10161618f409526"
+  },
+  "name": "Wine Salted Steam Chicken",
+  "chineseName": "酒鹽蒸雞",
+  "description": "",
+  "price": 19.95,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd35c10161618f409528"
+  },
+  "name": "Hakka Rice Wine Chicken",
+  "chineseName": "客家黃酒雞",
+  "description": "",
+  "price": 30.95,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd4bc10161618f40952a"
+  },
+  "name": "Curry Chicken",
+  "chineseName": "咖喱雞",
+  "description": "",
+  "price": 15.95,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd5ac10161618f40952c"
+  },
+  "name": "Sarang Burong",
+  "chineseName": "佛砵飄香",
+  "description": "",
+  "price": 19.95,
+  "category": "Poultry",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fd93c10161618f40952e"
+  },
+  "name": "Seafood Wat Dan Hor",
+  "chineseName": "海鮮滑蛋河",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fe4e103ea32cf3a2fe12"
+  },
+  "name": "Beef Wat Dan Hor",
+  "chineseName": "滑蛋牛河",
+  "description": "",
+  "price": 13.95,
+  "category": "Stir-Fry Noodles",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fe62103ea32cf3a2fe14"
+  },
+  "name": "Beef Chow Fun",
+  "chineseName": "乾炒牛河",
+  "description": "",
+  "price": 13.95,
+  "category": "Stir-Fry Noodles",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fea7103ea32cf3a2fe16"
+  },
+  "name": "Stir-Fried Pearl Noodles",
+  "chineseName": "幹炒銀針粉",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fed0103ea32cf3a2fe18"
+  },
+  "name": "Seafood Yee Mein",
+  "chineseName": "海鮮炒伊麵",
+  "description": "",
+  "price": 16.95,
+  "category": "Stir-Fry Noodles",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419feee103ea32cf3a2fe1a"
+  },
+  "name": "Hokkien Chow Mein",
+  "chineseName": "福建炒麵",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419feff103ea32cf3a2fe1c"
+  },
+  "name": "Indian Mee Goreng",
+  "chineseName": "印度幹炒麵",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ff10103ea32cf3a2fe1e"
+  },
+  "name": "Penang Chow Kueh Teow",
+  "chineseName": "檳城炒粿條",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ff67103ea32cf3a2fe20"
+  },
+  "name": "Shrimp Pad Thai",
+  "chineseName": "北泰",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ff78103ea32cf3a2fe22"
+  },
+  "name": "Singapore Rice Noodles",
+  "chineseName": "星洲炒米粉",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ff91103ea32cf3a2fe24"
+  },
+  "name": "Stir-Fried Rice Noodle w. Salted Fish",
+  "chineseName": "咸魚炒米",
+  "description": "",
+  "price": 13.95,
+  "category": "Stir-Fry Noodles",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419ffa8103ea32cf3a2fe26"
+  },
+  "name": "Cantonese Style Yin Yang Chow Mein",
+  "chineseName": "廣府炒鴛",
+  "description": "",
+  "price": 12.95,
+  "category": "Stir-Fry Noodles",
+  "order": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fff3103ea32cf3a2fe2a"
+  },
+  "name": "Bak Kut Teh (L) ",
+  "chineseName": "肉骨茶",
+  "description": "",
+  "price": 28.95,
+  "category": "Specialty",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6419fffa103ea32cf3a2fe2c"
+  },
+  "name": "Bak Kut Teh (S) ",
+  "chineseName": "肉骨茶",
+  "description": "",
+  "price": 18.95,
+  "category": "Specialty",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0036103ea32cf3a2fe2e"
+  },
+  "name": "Stir-Fried Prawn in House Special Sauce",
+  "chineseName": "特式大虾",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0090103ea32cf3a2fe30"
+  },
+  "name": "Mango Prawns",
+  "chineseName": "芒果大蝦",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a00a8103ea32cf3a2fe32"
+  },
+  "name": "Curry Fish Head",
+  "chineseName": "咖喱魚頭",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a00b6103ea32cf3a2fe34"
+  },
+  "name": "Sweet & Soup Carp",
+  "chineseName": "甜酸鯽魚",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a00df103ea32cf3a2fe36"
+  },
+  "name": "Grilled Stingray Fish in Banana Leaf",
+  "chineseName": "蕉葉鯆魚",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a00fc103ea32cf3a2fe38"
+  },
+  "name": "Stingray in Curry",
+  "chineseName": "咖喱鯆魚",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a010b103ea32cf3a2fe3a"
+  },
+  "name": "Tofu Fish Casserole",
+  "chineseName": "豆腐魚煲",
+  "description": "",
+  "price": 35.95,
+  "category": "Specialty",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0179103ea32cf3a2fe3c"
+  },
+  "name": "Prawn Mee",
+  "chineseName": "正宗蝦麵",
+  "description": "",
+  "price": 12.95,
+  "category": "Soup Noodles",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a019c103ea32cf3a2fe3e"
+  },
+  "name": "Ipoh Kway Teow Soup w. Chicken Strips",
+  "chineseName": "雞絲河粉",
+  "description": "",
+  "price": 12.95,
+  "category": "Soup Noodles",
+  "order": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a01b3103ea32cf3a2fe40"
+  },
+  "name": "Seafood Tom Yum Noodle",
+  "chineseName": "海鮮冬陰米粉",
+  "description": "",
+  "price": 14.5,
+  "category": "Soup Noodles",
+  "order": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a01c2103ea32cf3a2fe42"
+  },
+  "name": "Curry Fish Head Rice Noodle Soup",
+  "chineseName": "咖喱魚頭米",
+  "description": "",
+  "price": 14.5,
+  "category": "Soup Noodles",
+  "order": 14,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a01d0103ea32cf3a2fe44"
+  },
+  "name": "Curry Laksa Mee w. Curry Chicken",
+  "chineseName": "咖喱薯仔雞",
+  "description": "",
+  "price": 12.95,
+  "category": "Soup Noodles",
+  "order": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a020f103ea32cf3a2fe46"
+  },
+  "name": "Curry Laksa Mee w. Hainanese Chicken",
+  "chineseName": "咖喱滑",
+  "description": "Needs Chinese Name Translation",
+  "price": 12.95,
+  "category": "Soup Noodles",
+  "order": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0232103ea32cf3a2fe48"
+  },
+  "name": "Curry Yong Tau Foo Mee",
+  "chineseName": "咖喱什料麵",
+  "description": "",
+  "price": 13.95,
+  "category": "Soup Noodles",
+  "order": 17,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a024b103ea32cf3a2fe4a"
+  },
+  "name": "Clay Pot Noodles",
+  "chineseName": "煲仔麵",
+  "description": "",
+  "price": 13.95,
+  "category": "Soup Noodles",
+  "order": 19,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a025e103ea32cf3a2fe4c"
+  },
+  "name": "Pearl Noodles in Casserole",
+  "chineseName": "沙煲銀針粉",
+  "description": "",
+  "price": 12.95,
+  "category": "Soup Noodles",
+  "order": 20,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a029d103ea32cf3a2fe4e"
+  },
+  "name": "Fish Head w. Preserved Vegetable Rice Noodles",
+  "chineseName": "酸菜魚頭米",
+  "description": "",
+  "price": 13.95,
+  "category": "Soup Noodles",
+  "order": 21,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a02bf103ea32cf3a2fe50"
+  },
+  "name": "Wonton Mee",
+  "chineseName": "雲吞麵",
+  "description": "",
+  "price": 11.95,
+  "category": "Soup Noodles",
+  "order": 22,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0350103ea32cf3a2fe52"
+  },
+  "name": "Mixed Vegetable w. Garlic",
+  "chineseName": "蒜香雜菜",
+  "description": "",
+  "price": 14.95,
+  "category": "Vegetable",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a035e103ea32cf3a2fe54"
+  },
+  "name": "Malaysian Buddhaʼs Delight",
+  "chineseName": "馬式羅漢齋",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a036c103ea32cf3a2fe56"
+  },
+  "name": "Seafood Tofu",
+  "chineseName": "海鮮豆腐",
+  "description": "",
+  "price": 17.95,
+  "category": "Vegetable",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a037d103ea32cf3a2fe58"
+  },
+  "name": "Koo Koo Chicken Tofu",
+  "chineseName": "茨廠街豆腐",
+  "description": "",
+  "price": 17.95,
+  "category": "Vegetable",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a038f103ea32cf3a2fe5a"
+  },
+  "name": "Sizzling Stuffed Bean Curd",
+  "chineseName": "鐵板豆腐",
+  "description": "",
+  "price": 17.95,
+  "category": "Vegetable",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a03a3103ea32cf3a2fe5c"
+  },
+  "name": "String Bean, Eggplant, Okra & Petai in Belacan Paste",
+  "chineseName": "四大天王",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a03c6103ea32cf3a2fe5e"
+  },
+  "name": "Okra & Shrimp in Belacan Paste",
+  "chineseName": "馬來羊角豆",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a03d3103ea32cf3a2fe60"
+  },
+  "name": "Ong-Choy in Belacan Paste",
+  "chineseName": "馬來風光",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a03eb103ea32cf3a2fe62"
+  },
+  "name": "Ong-Choy in Fermented Bean Sauce",
+  "chineseName": "腐乳通菜",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a03fd103ea32cf3a2fe64"
+  },
+  "name": "Curry Assorted Vegetable Casserole",
+  "chineseName": "咖喱雜菜煲",
+  "description": "",
+  "price": 19.95,
+  "category": "Vegetable",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a047c103ea32cf3a2fe66"
+  },
+  "name": "String Beans in Belacan Paste",
+  "chineseName": "馬來豆子",
+  "description": "",
+  "price": 16.95,
+  "category": "Vegetable",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a04c7103ea32cf3a2fe68"
+  },
+  "name": "Fried Pork in Sweet & Sour Sauce",
+  "chineseName": "甜酸肉",
+  "description": "",
+  "price": 16.95,
+  "category": "Meat",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a04e2103ea32cf3a2fe6a"
+  },
+  "name": " Pork Chop in Peking Sauce",
+  "chineseName": "排骨王",
+  "description": "",
+  "price": 16.95,
+  "category": "Meat",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a04ef103ea32cf3a2fe6c"
+  },
+  "name": "Hakka Steamed Pork Belly w. Preserved Vegetables",
+  "chineseName": "客家梅菜扣肉",
+  "description": "",
+  "price": 16.95,
+  "category": "Meat",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0508103ea32cf3a2fe6e"
+  },
+  "name": "Salt & Pepper Ribs",
+  "chineseName": "椒鹽排骨",
+  "description": "",
+  "price": 16.95,
+  "category": "Meat",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0517103ea32cf3a2fe70"
+  },
+  "name": "Malaysian Style Spare Rib",
+  "chineseName": "南乳排骨",
+  "description": "",
+  "price": 16.95,
+  "category": "Meat",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0527103ea32cf3a2fe72"
+  },
+  "name": "Sizzling Beef Cubes",
+  "chineseName": "鐵板牛肉丁",
+  "description": "",
+  "price": 19.95,
+  "category": "Meat",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0537103ea32cf3a2fe74"
+  },
+  "name": "Sizzling Curry Beef",
+  "chineseName": "鐵板咖喱牛",
+  "description": "",
+  "price": 20.95,
+  "category": "Meat",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0544103ea32cf3a2fe76"
+  },
+  "name": "Sizzling Pepper Beef",
+  "chineseName": "鐵板牛肉",
+  "description": "",
+  "price": 19.95,
+  "category": "Meat",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0553103ea32cf3a2fe78"
+  },
+  "name": "Curry Brisket",
+  "chineseName": "咖喱牛腩",
+  "description": "",
+  "price": 20.95,
+  "category": "Meat",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a05a0103ea32cf3a2fe7a"
+  },
+  "name": "Hainanese Chicken over Rice",
+  "chineseName": "海南雞飯",
+  "description": "雞腿飯 Drumstick +.50",
+  "price": 10.5,
+  "category": "Rice Dishes",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a05b9103ea32cf3a2fe7c"
+  },
+  "name": "Nasi Lemak",
+  "chineseName": "椰漿飯",
+  "description": "",
+  "price": 12.25,
+  "category": "Rice Dishes",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a05cc103ea32cf3a2fe7e"
+  },
+  "name": "Curry Chicken",
+  "chineseName": "咖喱雞飯 雞腿飯 Drumstick +.50",
+  "description": "",
+  "price": 10.75,
+  "category": "Rice Dishes",
+  "order": 3,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a05e1103ea32cf3a2fe80"
+  },
+  "name": "Hakka Steamed Pork Belly w. Preserved Vegetables over Rice",
+  "chineseName": "客家梅菜扣肉飯",
+  "description": "",
+  "price": 10.95,
+  "category": "Rice Dishes",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a05f9103ea32cf3a2fe82"
+  },
+  "name": "Curry Beef Brisket",
+  "chineseName": "咖喱牛腩飯",
+  "description": "",
+  "price": 12.95,
+  "category": "Rice Dishes",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0614103ea32cf3a2fe84"
+  },
+  "name": "Pineapple Chicken Fried Rice",
+  "chineseName": "菠蘿雞炒飯",
+  "description": "Beef 13.95 || Shrimp 12.95.",
+  "price": 12.95,
+  "category": "Rice Dishes",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0628103ea32cf3a2fe86"
+  },
+  "name": "Salted Fish Fried Rice",
+  "chineseName": "鹹魚炒飯",
+  "description": "",
+  "price": 13.95,
+  "category": "Rice Dishes",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0637103ea32cf3a2fe88"
+  },
+  "name": "Belacan Fried Rice",
+  "chineseName": "馬來棧炒飯",
+  "description": "",
+  "price": 13.95,
+  "category": "Rice Dishes",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0646103ea32cf3a2fe8a"
+  },
+  "name": "Seafood Fried Rice",
+  "chineseName": "海鮮炒飯",
+  "description": "",
+  "price": 13.95,
+  "category": "Rice Dishes",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0652103ea32cf3a2fe8c"
+  },
+  "name": "Young Chow Fried Rice",
+  "chineseName": "揚洲炒飯",
+  "description": "",
+  "price": 12.95,
+  "category": "Rice Dishes",
+  "order": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0662103ea32cf3a2fe8e"
+  },
+  "name": "Shrimp Fried Rice",
+  "chineseName": "蝦炒飯",
+  "description": "",
+  "price": 12.95,
+  "category": "Rice Dishes",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a066f103ea32cf3a2fe90"
+  },
+  "name": "Beef Fried Rice",
+  "chineseName": "牛肉炒飯",
+  "description": "",
+  "price": 13.95,
+  "category": "Rice Dishes",
+  "order": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a067d103ea32cf3a2fe92"
+  },
+  "name": "Mixed Vegetable Fried Rice",
+  "chineseName": "雜菜炒飯",
+  "description": "",
+  "price": 10.95,
+  "category": "Rice Dishes",
+  "order": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a06f4103ea32cf3a2fe94"
+  },
+  "name": "Pulut Hitam",
+  "chineseName": "黑糯米",
+  "description": "",
+  "price": 5.75,
+  "category": "Drinks & Desserts",
+  "order": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0706103ea32cf3a2fe96"
+  },
+  "name": " Bubor Cha Cha",
+  "chineseName": "摩摩喳喳",
+  "description": "",
+  "price": 5.75,
+  "category": "Drinks & Desserts",
+  "order": 2,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a071c103ea32cf3a2fe98"
+  },
+  "name": "Roti Tissue",
+  "chineseName": "印度紙巾麵包",
+  "description": "",
+  "price": 7.75,
+  "category": "Drinks & Desserts",
+  "order": 4,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a072a103ea32cf3a2fe9a"
+  },
+  "name": "Banana Roti Cake",
+  "chineseName": "香蕉餅",
+  "description": "",
+  "price": 7.95,
+  "category": "Drinks & Desserts",
+  "order": 5,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0741103ea32cf3a2fe9c"
+  },
+  "name": "Peanut Roti Cake",
+  "chineseName": "花生餅",
+  "description": "",
+  "price": 7.95,
+  "category": "Drinks & Desserts",
+  "order": 6,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a074f103ea32cf3a2fe9e"
+  },
+  "name": "Longan Drink",
+  "chineseName": "龍眼水",
+  "description": "",
+  "price": 4.5,
+  "category": "Drinks & Desserts",
+  "order": 7,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0760103ea32cf3a2fea0"
+  },
+  "name": "Lychee Drink",
+  "chineseName": "荔枝水",
+  "description": "",
+  "price": 4.5,
+  "category": "Drinks & Desserts",
+  "order": 8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0776103ea32cf3a2fea2"
+  },
+  "name": "Malaysian Coffee",
+  "chineseName": "馬來咖啡",
+  "description": "",
+  "price": 4.25,
+  "category": "Drinks & Desserts",
+  "order": 9,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0781103ea32cf3a2fea4"
+  },
+  "name": "Soy Milk w. Grass Jelly",
+  "chineseName": "豆漿涼粉",
+  "description": "",
+  "price": 4.25,
+  "category": "Drinks & Desserts",
+  "order": 11,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a078f103ea32cf3a2fea6"
+  },
+  "name": "Homemade Plum Soda",
+  "chineseName": "梅子蘇打",
+  "description": "",
+  "price": 4.5,
+  "category": "Drinks & Desserts",
+  "order": 12,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a07a4103ea32cf3a2fea8"
+  },
+  "name": "Soda",
+  "chineseName": "汽水",
+  "description": "",
+  "price": 2,
+  "category": "Drinks & Desserts",
+  "order": 13,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a082d103ea32cf3a2feaa"
+  },
+  "name": "Malaysian Iced Milk Tea",
+  "chineseName": "馬來奶茶",
+  "description": "",
+  "price": 4.25,
+  "category": "Drinks & Desserts",
+  "order": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0887103ea32cf3a2feac"
+  },
+  "name": "Hainanese Flavored Rice",
+  "chineseName": "油飯",
+  "description": "2.25/4.50",
+  "price": 4.5,
+  "category": "Sides",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a0899103ea32cf3a2feae"
+  },
+  "name": "Coconut Flavored Rice",
+  "chineseName": "椰飯",
+  "description": "2.25/4.50",
+  "price": 4.5,
+  "category": "Sides",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641a08a8103ea32cf3a2feb0"
+  },
+  "name": "Steamed White Rice",
+  "chineseName": "白飯",
+  "description": "1.95/4.50",
+  "price": 4.5,
+  "category": "Sides",
+  "order": 0,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641af905ffda1e1bfae0ce9b"
+  },
+  "chineseName": "酸菜魚頭湯",
+  "name": "Crispy Fish Head Preserved Vegetable Soup",
+  "price": 16.95,
+  "category": "Soups To Share",
+  "description": "",
+  "order": 5,
+  "__v": 0
+}]
