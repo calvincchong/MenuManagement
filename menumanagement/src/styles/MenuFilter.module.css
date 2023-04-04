@@ -19,7 +19,7 @@
   margin: 0 0 .5rem 0;
   padding: 3px;
   border: 1px solid #ccc;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow-x: wrap;
 }
 
@@ -39,8 +39,7 @@
     /* flex-direction: column; */
   }
 
-  /** Turns the menu filter into a horizontal slider that stays above the
-  */
+  /** Turns the menu filter into a horizontal slider that stays above the*/
   .box {
     /* width: 100%; */
     z-index: 900;
