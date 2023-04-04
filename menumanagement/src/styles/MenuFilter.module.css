@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column;
   /* margin: .75rem; */
+  /* position: sticky; */
   position: sticky;
-  top: 0;
+  top: 60px;
   /* align-self: flex-start; */
 }
 
@@ -19,7 +20,7 @@
   margin: 0 0 .5rem 0;
   padding: 3px;
   border: 1px solid #ccc;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   overflow-x: wrap;
 }
 
@@ -39,8 +40,7 @@
     /* flex-direction: column; */
   }
 
-  /** Turns the menu filter into a horizontal slider that stays above the
-  */
+  /** Turns the menu filter into a horizontal slider that stays above the*/
   .box {
     /* width: 100%; */
     z-index: 900;
@@ -48,7 +48,7 @@
     flex-direction: row;
     margin: 0;
     position: sticky;
-    top: 0;
+    top: 40px;
     align-self: flex-start;
     overflow-x: auto;
     white-space: nowrap;

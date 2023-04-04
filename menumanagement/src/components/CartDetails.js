@@ -39,12 +39,14 @@ const CartDetails = () => {
     let newCart = removeFromCartAndSetStorage(key, cart);
     localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
+    window.dispatchEvent(new Event('removeItemFromCart'));
   };
 
   const removeItem = ( key ) => {
     let newCart = removeAllOfOneItemFromCart(key, cart);
     localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
+    window.dispatchEvent(new Event('removeItemFromCart'));
   };
 
   // const orderTotal = cart.reduce((acc, item) => {
