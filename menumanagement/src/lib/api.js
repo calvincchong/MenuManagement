@@ -12,15 +12,8 @@ export const fetcher = async ({url, method, body, json = true}) => {
   console.log('fail here', res);
 
   // Error handling
+  // TODO: Proper Error Handling for with fetch fails;
   if (!res.ok) {
-    // console.log('inside fetcher', res);
-    // const error = new Error('An error occurred while fetching the data.');
-    // // const error = new Error('An error occurred while fetching the data.');
-    // // Attach extra info to the error object.
-    // error.info = await res.json();
-    // error.status = res.status;
-    // throw error;
-    // is that the best way to handle an error here though?
     throw new Error('An error occurred while fetching the data.');
   }
 
@@ -38,7 +31,6 @@ export const fetcher = async ({url, method, body, json = true}) => {
 }
 
 // register user
-// takes in the full body
 export const register = async (user) => {
   console.log("registering user", user)
   console.log('what is happening', user.email, user.password)
@@ -58,6 +50,3 @@ export const login = async ({email, password}) => {
 
 }
 
-// module.exports = {
-//   'fetcher': fetcher
-// }
