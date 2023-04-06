@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     // topLevelAwait: true
-    serverComponentsExternalPackages: ["mongoose"]
+    serverComponentsExternalPackages: ["mongoose", "bcrypt"]
   },
   webpack(config) {
     config.experiments = { ...config.experiments, topLevelAwait: true };

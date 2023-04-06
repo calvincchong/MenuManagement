@@ -32,7 +32,7 @@ import getMenuDBSS from '../../lib/serversideDBCalls/getMenuDBSS';
 //   })
 //   return data;
 // }
-const headerTCSS = "flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20 max-h-40"
+const headerTCSS = "max-h-xxxvh flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20 max-h-40"
 const menuDivStyle = "border-solid border-indigo-500 border-2";
 
 let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
