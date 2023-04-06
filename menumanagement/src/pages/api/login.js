@@ -34,8 +34,6 @@ export default async function login(req, res) {
 
     if (isUser) {
       const jwt = await createJWT(user);
-      console.log('check whether login api feeds user to make jwt:', user)
-      console.log('check whether login api is making, jwt:', jwt)
       res.setHeader(
         'Set-Cookie',
         serialize(process.env.JWT_COOKIE_NAME, jwt, {

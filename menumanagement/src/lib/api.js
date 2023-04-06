@@ -32,21 +32,14 @@ export const fetcher = async ({url, method, body, json = true}) => {
 
 // register user
 export const register = async (user) => {
-  console.log("registering user", user)
-  console.log('what is happening', user.email, user.password)
-
   return fetcher({url: '/api/register', method: 'POST', body: user});
 }
 
 // TODO: User Sign In -> takes in user, but only fields needed are email and password.
 export const login = async ({email, password}) => {
-  // prevents actually running API for temporarily.
-  console.log ('email', email, 'password', password)
+  // console.log ('email', email, 'password', password)
   // return fetcher({url: '/api/login', method: 'POST', body: {email, password}});
-  return fetcher({url: '/api/login', method: 'POST', body: {email, password}, json: false});
-  // return {
-  //   error: new Error('this is fake error')
-  // }
+  return fetcher({url: '/api/login', method: 'POST', body: {email, password}, json: false})  // temp flag that must be removed for handling wrong password notification
 
 }
 

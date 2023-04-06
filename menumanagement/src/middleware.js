@@ -32,7 +32,6 @@ export default async function middleware (req, res) {
   }
 
   const jwt = req.cookies.get(process.env.JWT_COOKIE_NAME);
-  console.log('why am i not getting a jwt', jwt, req.cookies);
 
   if (!jwt) {
     req.nextUrl.pathname = '/login';
@@ -43,7 +42,6 @@ export default async function middleware (req, res) {
     await verifyJWT(jwt.value);
     return NextResponse.next();
   } catch (e) {
-    console.log('error from middleware', e);
     req.nextUrl.pathname = '/login';
     return NextResponse.redirect(req.nextUrl);
   }

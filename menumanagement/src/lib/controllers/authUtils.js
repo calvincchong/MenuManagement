@@ -46,8 +46,6 @@ export const getUserFromCookies = async (req) => {
 
   const { id }  = await validateJWT(jwt);
 
-  console.log('this is running but fail', req);
-
   // DB call to find user. // THIS SHOULD BE DIFFERENT
   const user = await users.findOne({
     email: req.body.email,
