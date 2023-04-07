@@ -60,7 +60,7 @@ const Menu = async () => {
     <div className={styles.menu}>
       <NavBar />
       <div className={headerTCSS}>
-        <div className="absolute top-1/4 text-center">
+        <div className="absolute top-1/4 text-center"> // is this absolute position causing image to disappear on scroll?
           <div>
             <h1 className={tcss.h1white}>
             Our Menu

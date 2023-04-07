@@ -10,6 +10,7 @@
   max-width: 980px;
   /* width: 100%; */
   max-height: fit-content;
+  /* max-height: 64px; */
   width: 100vw;
 }
 
