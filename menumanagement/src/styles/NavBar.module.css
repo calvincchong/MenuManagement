@@ -10,7 +10,6 @@
   max-width: 980px;
   /* width: 100%; */
   max-height: fit-content;
-  /* max-height: 64px; */
   width: 100vw;
 }
 
@@ -29,3 +28,18 @@
   background-color: white;
 }
 */
+
+@media (max-device-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right:auto;
+    max-width: 100%;
+    max-height: 70px;
+    width: 100vw;
+  }
+}
