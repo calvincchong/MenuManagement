@@ -15,12 +15,15 @@ const NavBar = () => {
     // className="flex flex-wrap justify-between space-x-4 mx-auto max-w-screen-xl max-hd-[40px] drop-shadow-sm border-blue-50 border-b-2"
     <div className={`${styles.widecontainer}`}>
     <div className={`${styles.container}`}>
+     {/* <div> Koo Koo Logo </div> */}
+     <div>
       <div className="grid grid-cols-2 max-h-[64]">
-       <div><Lottie animationData={chicken_header} loop={true} /></div>
-       <div className="mt-auto mb-auto font-thin hidden sm:visible">Koo Koo Chicken</div>
+        <div><Lottie animationData={chicken_header} loop={true} /></div>
+        <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
       </div>
+     </div>
 
-      <div className="hidden sm:visible">
+      <div className="hidden sm:flex">
         <ul className="flex mt-2 font-thin flex-row text-sm lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
           <li>
             <Link href='/'>Home</Link>
