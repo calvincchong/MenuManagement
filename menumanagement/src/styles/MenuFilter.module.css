@@ -30,9 +30,9 @@
   .categoryContainer {
     /* display:none; */
     /* padding:none; */
-    padding-right: 3px;
-    padding-left: 3px;
-    margin-left: 1px;
+    padding-right: .5em;
+    padding-left: .5em;
+    margin-left: 2px;
     line-height: initial;
      display: flex;
   }
@@ -76,6 +76,8 @@
     white-space: nowrap;
     height: 3em;
     scroll-snap-align: end;
+    padding-bottom: 3px;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
   }
 
   .checkbox input[type="checkbox"] {
