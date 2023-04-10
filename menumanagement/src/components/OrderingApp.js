@@ -55,7 +55,7 @@ const OrderingApp = ({items, categories}) => {
 
   return (
     <>
-    <div className={headerTCSS}>
+    {/* <div className={headerTCSS}>
       <div className="absolute top-1/4 text-center">
         <div>
           <h1 className={tcss.h1white}>
@@ -69,8 +69,8 @@ const OrderingApp = ({items, categories}) => {
           Call 718-827-1698 to place your order.
         </div>
       </div>
-    </div>
-    {/* <div></div> */}
+    </div> */}
+    <div></div>
     <div className={isShowCart ? styles.menuContainerWithCart : styles.menuContainerWithoutCart}>
       <MenuFilter categories={categories} />
       <div className='w-12/12 sm:w-9/12 md:w-9/12'>
