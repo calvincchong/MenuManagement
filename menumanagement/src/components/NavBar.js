@@ -16,19 +16,24 @@ const NavBar = () => {
     <div className={`${styles.widecontainer}`}>
     <div className={`${styles.container}`}>
      {/* <div> Koo Koo Logo </div> */}
-     <div className="grid grid-cols-2 gap-1">
-       <div><Lottie animationData={chicken_header} loop={true} /></div>
-       <div className="mt-auto mb-auto">Koo Koo Chicken</div>
+     <div>
+      <div className="grid grid-cols-2 max-h-[64]">
+        <div><Lottie className={`${styles.kookooicon}`} animationData={chicken_header} loop={true} /></div>
+        <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
       </div>
-      <ul className="flex mt-2 font-thin flex-row lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/menu'>Menu</Link>
-        </li>
-        <li>About</li>
-      </ul>
+     </div>
+
+      <div className="hidden sm:flex">
+        <ul className="flex mt-2 font-thin flex-row text-sm lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
+          <li>
+            <Link href='/'>Home</Link>
+          </li>
+          <li>
+            <Link href='/menu'>Menu</Link>
+          </li>
+        </ul>
+      </div>
+
       <ShoppingCart />
     </div>
     </div>

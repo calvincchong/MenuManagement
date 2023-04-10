@@ -59,8 +59,8 @@ const Menu = async () => {
   return (
     <div className={styles.menu}>
       <NavBar />
-      <div className={headerTCSS}>
-        <div className="absolute top-1/4 text-center">
+      <div className={styles.photoHeader}>
+        <div className="text-center mt-auto mb-auto">
           <div>
             <h1 className={tcss.h1white}>
             Our Menu

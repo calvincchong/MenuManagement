@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector, useDispatch } from 'react-redux';
 import { toggleCart } from '../store/reducers/cartSlice';
 
 const ShoppingCart = () => {

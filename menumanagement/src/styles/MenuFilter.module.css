@@ -1,13 +1,9 @@
-/* w-3/12 flex-col m-3 sticky top-0 self-star */
 .box {
 	width: 100%;
   display: flex;
   flex-direction: column;
-  /* margin: .75rem; */
-  /* position: sticky; */
   position: sticky;
-  top: 60px;
-  /* align-self: flex-start; */
+  top: 74px;
 }
 
 .categoryContainer {
@@ -22,6 +18,7 @@
   border: 1px solid #ccc;
   transition: all 0.2s ease-in-out;
   overflow-x: wrap;
+  transition: transform 500ms;
 }
 
 .categoryContainer:hover {
@@ -33,11 +30,36 @@
   .categoryContainer {
     /* display:none; */
     /* padding:none; */
-    padding: 2px;
-    margin: none;
+    padding-right: .5em;
+    padding-left: .5em;
+    margin-left: 2px;
     line-height: initial;
      display: flex;
-    /* flex-direction: column; */
+  }
+
+  .categoryContainer:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+  }
+
+  .categoryContainer:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-right: 10px;
+  }
+
+  .categoryContainer:hover {
+    box-shadow: none;
+    transform: none;
+  }
+
+  .categoryContainer:active {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transform: scale(1.05);
+    transition: transform 250ms;
+    transition-timing-function: ease-out;
+
   }
 
   /** Turns the menu filter into a horizontal slider that stays above the*/
@@ -53,8 +75,9 @@
     overflow-x: auto;
     white-space: nowrap;
     height: 3em;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    scroll-snap-align: end;
+    padding-bottom: 3px;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
   }
 
   .checkbox input[type="checkbox"] {
