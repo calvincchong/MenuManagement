@@ -59,8 +59,8 @@ const Menu = async () => {
   return (
     <div className={styles.menu}>
       <NavBar />
-      <div className={headerTCSS}>
-        <div className="top-1/4 text-center mt-auto mb-auto">
+      {/* <div className={headerTCSS}>
+        <div className="text-center mt-auto mb-auto">
           <div>
             <h1 className={tcss.h1white}>
             Our Menu
@@ -73,7 +73,7 @@ const Menu = async () => {
             Call 718-827-1698 to place your order.
           </div>
         </div>
-      </div>
+      </div> */}
       <NotUpdatedMessage />
       <OrderingApp items={databaseItems} categories={categories} />
     </div>
