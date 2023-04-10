@@ -18,7 +18,7 @@ const NavBar = () => {
      {/* <div> Koo Koo Logo </div> */}
      <div>
       <div className="grid grid-cols-2 max-h-[64]">
-        <div><Lottie className="w-full h-full" animationData={chicken_header} loop={true} /></div>
+        <div><Lottie className="w-full h-12" animationData={chicken_header} loop={true} /></div>
         <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
       </div>
      </div>
