@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { CategoryItems } from './CategoryItems';
 import { ItemCard } from './ItemCard';
+import ItemDetails from './ItemDetails';
 import styles from '../styles/OrderingApp.module.css';
 import tcss from '../styles/globaltailwind';
 import MenuFilter from './MenuFilter';
@@ -10,6 +11,7 @@ import CartDetails from './CartDetails';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../store/reducers/menuCategorySlice';
 import { toggleCart } from '../store/reducers/cartSlice';
+import { selectItem } from '../store/reducers/selectItemSlice';
 import { useTransition, useSpring, animated, config, useSpringRef } from '@react-spring/web';
 // import Message from './AddToCartNotification';
 
@@ -19,6 +21,7 @@ const headerTCSS = "flex relative justify-center place-content-center min-h-xxxv
 const OrderingApp = ({items, categories}) => {
   const selectedCategory = useSelector((state) => state.menuCategory);
   const isShowCart = useSelector((state) => state.cart);
+  const isShowItemDetails = useSelector((state) => state.item);
   const dispatch = useDispatch();
   const transRef = useSpringRef();
   const trans = useTransition([isShowCart], {
@@ -34,10 +37,10 @@ const OrderingApp = ({items, categories}) => {
       transform: `scale(${1})`,
     },
     // DEVNOTE: temporarily removed 'leave' to prevent React Dev Mode to create flashing
-    // leave: {
-    //   opacity: 0,
-    //   transform: `scale(${0.9})`,
-    // },
+    leave: {
+      opacity: .5,
+      transform: `scale(${0.9})`,
+    },
     config: config.wobble
   });
 
@@ -53,8 +56,17 @@ const OrderingApp = ({items, categories}) => {
     return category === selectedCategory.value;
   };
 
+
+  console.log('showing item details', isShowItemDetails.value)
+
   return (
     <>
+    {isShowItemDetails.value !== false ?
+      (<div>
+        hellooooo
+        <ItemDetails />
+      </div>)
+      : null}
     {/* <div className={headerTCSS}>
       <div className="absolute top-1/4 text-center">
         <div>
@@ -70,7 +82,7 @@ const OrderingApp = ({items, categories}) => {
         </div>
       </div>
     </div> */}
-    <div></div>
+    {/* <div></div> */}
     <div className={isShowCart ? styles.menuContainerWithCart : styles.menuContainerWithoutCart}>
       <MenuFilter categories={categories} />
       <div className='w-12/12 sm:w-9/12 md:w-9/12'>
@@ -106,6 +118,8 @@ const OrderingApp = ({items, categories}) => {
         :
         null
       }
+
+
 
     </div>
     </>
