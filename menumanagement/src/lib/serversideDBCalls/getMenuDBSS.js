@@ -14,6 +14,8 @@ export default async function getMenuDBSS() {
     let formattedItems = items.map(item => {
       return {
         menuName: `${item.name} ${item.chineseName}`,
+        englishName: item.name,
+        chineseName: item.chineseName,
         description: item.description,
         category: item.category,
         price: item.price,

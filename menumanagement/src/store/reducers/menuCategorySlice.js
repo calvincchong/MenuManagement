@@ -10,11 +10,11 @@ const menuCategorySlice = createSlice({
   initialState,
   reducers: {
     selectCategory: (state, action) => {
-      console.log('this is working');
-      console.log('state, and action', {
-        state,
-        action
-      })
+      // console.log('this is working');
+      // console.log('state, and action', {
+      //   state,
+      //   action
+      // })
      state.value = action.payload;
     }
   }

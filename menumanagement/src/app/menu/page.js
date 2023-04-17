@@ -10,28 +10,6 @@ import tcss from '../../styles/globaltailwind';
 import Link from 'next/link';
 import getMenuDBSS from '../../lib/serversideDBCalls/getMenuDBSS';
 
-// fetch data from menu api here but no longer used since this is an internal API call on a server component.
-// const getMenuDataFromMongo = async () => {
-//   const res = await fetch('http://localhost:3000/api/menu', {
-//     method: 'GET'
-//   });
-//   // const res = await fetch(`${process.env.DOMAIN}/api/menu`, {
-//   //   method: 'GET'
-//   // });
-
-//   let data = await res.json();
-//   // console.log('this is the data', data);
-//   data = data.data.map(item => {
-//     return {
-//       menuName: `${item.name} ${item.chineseName}`,
-//       description: item.description,
-//       category: item.category,
-//       price: item.price,
-//       order: item.order
-//     }
-//   })
-//   return data;
-// }
 const headerTCSS = "max-h-xxxvh flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20 max-h-40"
 const menuDivStyle = "border-solid border-indigo-500 border-2";
 
@@ -50,11 +28,9 @@ const NotUpdatedMessage = () => {
     )
   }
 }
-// getMenuFixturesFromJSON()
 
 const Menu = async () => {
-  // console.log('this is database Items', databaseItems);
-  // console.log ('databaseItems retrieved in menu SSR page', typeof databaseItems);
+  // console.log('this is database Items', databaseItems, 'typeof databaseItems', typeof databaseItems);
 
   return (
     <div className={styles.menu}>
