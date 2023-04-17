@@ -37,10 +37,10 @@ const OrderingApp = ({items, categories}) => {
       transform: `scale(${1})`,
     },
     // DEVNOTE: temporarily removed 'leave' to prevent React Dev Mode to create flashing
-    leave: {
-      opacity: .5,
-      transform: `scale(${0.9})`,
-    },
+    // leave: {
+    //   opacity: .5,
+    //   transform: `scale(${0.9})`,
+    // },
     config: config.wobble
   });
 

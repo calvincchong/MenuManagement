@@ -22,8 +22,8 @@ export default async function editMenu(req, res) {
         const item = await menuItems.create(
           req.body
         ); /* create a new model in the database */
-        console.log(item);
-        console.log(typeof item)
+        // console.log(item);
+        // console.log(typeof item)
         res.status(201).json({
           success: true,
           message: 'menu item created successfully',
