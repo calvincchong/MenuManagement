@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  background-color: rgba(179, 179, 179, 0.481);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100dvh;
+  width: 100dvh;
+  margin: auto;
+  z-index: 0;
+  position: fixed;
+  inset: 0;
+}
+
+.formContainer {
+  background-color: beige;
+  margin: auto;
+  padding: 2rem;
+}

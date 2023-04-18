@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectCategory } from '../store/reducers/menuCategorySlice';
 import  styles from '../styles/MenuFilter.module.css';
 
+// filters cart items by category
 const MenuFilter = ({ categories }) => {
   const selectedCategory = useSelector((state) => state.menuCategory);
   const dispatch = useDispatch();

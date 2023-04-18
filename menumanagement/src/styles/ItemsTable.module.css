@@ -1,0 +1,23 @@
+/* @media screen and (max-width: 992px) { */
+  .navbar-collapse {
+    display: block!important;
+    position: absolute;
+    order: 1;
+    background-color: gray;
+    top: 0;
+    left: -13%;
+    width: 75vw!important;
+    height: 100vh!important;
+    padding: 20px;
+    z-index: 10;
+    box-shadow: 8px 15px 15px -5px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 8px 15px 15px -5px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px 15px 15px -5px rgba(0,0,0,0.44);
+    transition: 1s!important;
+  }
+
+  .collapsed {
+    display: none!important;
+    left: -113%;
+  }
+/* } */
