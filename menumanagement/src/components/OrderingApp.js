@@ -56,9 +56,6 @@ const OrderingApp = ({items, categories}) => {
     return category === selectedCategory.value;
   };
 
-
-  console.log('showing item details', isShowItemDetails.value)
-
   return (
     <>
     {isShowItemDetails.value !== false ?
