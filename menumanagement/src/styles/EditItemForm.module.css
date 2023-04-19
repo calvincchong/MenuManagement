@@ -1,12 +1,12 @@
+/* ALL STYLING CURRENTLY IS LARGE SCREEN ONLY */
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
   background-color: rgba(179, 179, 179, 0.481);
   padding-top: 10px;
   padding-bottom: 10px;
   height: 100dvh;
-  width: 100dvh;
+  width: 100dvw;
   margin: auto;
   z-index: 0;
   position: fixed;
@@ -17,4 +17,37 @@
   background-color: beige;
   margin: auto;
   padding: 2rem;
+  scroll
+}
+
+.inline-icon {
+  display: inline;
+  margin: 0 0.125em;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Form STYLING BELOW
+*/
+.input-label {
+  font-size: 0.8rem;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.small-text-input {
+  width: 25%;
+  max-width: 100%;
+  padding-left: 0.5rem;
+  /* margin-bottom: 0.5rem; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
