@@ -1,0 +1,108 @@
+.wrapper {
+  display: flex;
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+}
+
+.accordion {
+  --_button-size: 1rem;
+  --_panel-padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* border-radius: 6px; */
+  /* flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5rem;
+  overflow: hidden;
+  font-size: 1.125rem;
+  line-height: 1.6; */
+}
+
+.accordion-panel {
+  position: relative;
+  isolation: isolate;
+  flex-basis: 60px;
+  /* flex-basis: calc((var(--_panel-padding) + var(--_button-size)) * 2); */
+  height: 140px;
+  padding: var(--_panel-padding);
+  /* border-radius: 6px; */
+  border-radius: calc((var(--_panel-padding) + var(--_button-size)) / 2);
+  overflow: hidden;
+}
+
+.accordion-panel:has([aria-expanded='true']) {
+  flex-basis: 100%;
+  /* flex-basis: clamp(15rem, 40vh, 20rem); */
+}
+
+.accordion-image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* display: flex;
+  flex-direction: column;
+  flex: 1; */
+}
+
+.accordion-content {
+  padding: 0 1rem;
+  /* border: 1px solid red; */
+  font-size: 10px;
+}
+
+.accordion-content > p {
+  transform: translateY(3rem);
+  opacity: 0;
+}
+
+.accordion-trigger {
+  background-color: #dcdcdc83;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 0;
+  padding: 0;
+  flex-direction: row-reverse;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer; */
+}
+
+.accordion-header {
+  border: black;
+}
+
+.accordion-panel:nth-child(1) {
+  --_panel-color: rgb(255, 130, 130);
+}
+
+.accordion-panel:nth-child(2) {
+  --_panel-color: rgb(220, 15, 15);
+}
+
+.accordion-icon {
+  fill: var(--_panel-color);
+  background: hsl(0 0% 0% / 0.25);
+  /* background: rgb(73, 69, 69); */
+  width: var(--_button-size);
+  padding: 0.75rem;
+  margin: 0.2rem;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
