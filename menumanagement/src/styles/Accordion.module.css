@@ -2,6 +2,7 @@
   display: flex;
   max-width: 50rem;
   margin-inline: auto;
+  padding-top: 0.5rem;
   /* padding-inline: 0.5rem; */
   font-size: 0.8rem;
 }
@@ -19,6 +20,7 @@
   gap: 0.25rem;
   overflow-x: hidden;
   overflow-y: hidden;
+  width: 100%;
   /* border-radius: 6px; */
   /* flex: 1;
   border: 1px solid #ccc;
@@ -86,9 +88,9 @@
   cursor: pointer; */
 }
 
-/* .accordion-trigger:hover {
+.accordion-trigger:hover {
   background-color: #ffb254;
-} */
+}
 
 .accordion-header {
   border: black;

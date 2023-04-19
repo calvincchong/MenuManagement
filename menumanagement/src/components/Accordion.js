@@ -3,44 +3,17 @@ import { useState } from 'react';
 import styles from '../styles/Accordion.module.css';
 import { GrTrigger } from 'react-icons/gr';
 
-const sampleImages = [
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Lobak-min_ph9ovw.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918349/okra-min_cm9k8v.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/2F4A0034-min_ncp3nx.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Koo_Koo_Restaurant_Spice-min_p3qskx.jpg',
-];
-
-const sampleImageObjects = [
-  {
-    name: 'General Apps',
-    catItemNum: 'A',
-    url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg',
-  },
-  {
-    name: 'Lobak',
-    catItemNum: 'A12',
-    url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Lobak-min_ph9ovw.jpg',
-  },
-  {
-    name: 'Ong Choy',
-    catItemNum: 'R14',
-    url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918349/okra-min_cm9k8v.jpg',
-  },
-  {
-    name: 'Ong Choy',
-    catItemNum: 'R14',
-    url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/2F4A0034-min_ncp3nx.jpg',
-  },
-  {
-    name: 'Spices',
-    catItemNum: 'XS1',
-    url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Koo_Koo_Restaurant_Spice-min_p3qskx.jpg',
-  },
-];
+// fixtures
+import { imageFixtures } from '../lib/fixtures/imageFixtures';
 
 const Accordion = ({ categoryName, num, images }) => {
   const [isExpandedIndex, setIsExpandedIndex] = useState(0);
+
+  // const sampleImageObjects = imageFixtures.sampleImageObjects || [];
+  const sampleImageObjects = imageFixtures[categoryName] || [];
+  if (imageFixtures[categoryName] === undefined) {
+    console.log(`${categoryName} is not a valid category name`);
+  }
 
   return (
     <div>
@@ -48,7 +21,10 @@ const Accordion = ({ categoryName, num, images }) => {
         <div className={styles['accordion']}>
           {sampleImageObjects.map((image, index) => {
             return (
-              <div className={styles['accordion-panel']}>
+              <div
+                className={styles['accordion-panel']}
+                aria-expanded={index === isExpandedIndex ? 'true' : 'false'}
+              >
                 <h3
                   id={`panel${index}-header`}
                   className={styles['accordion-header']}
