@@ -3,107 +3,67 @@ import { useState } from 'react';
 import styles from '../styles/Accordion.module.css';
 import { GrTrigger } from 'react-icons/gr';
 
-const sampleImages = [
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Lobak-min_ph9ovw.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918349/okra-min_cm9k8v.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/2F4A0034-min_ncp3nx.jpg',
-  'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Koo_Koo_Restaurant_Spice-min_p3qskx.jpg',
-];
+// fixtures
+import { imageFixtures } from '../lib/fixtures/imageFixtures';
 
 const Accordion = ({ categoryName, num, images }) => {
+  const [isExpandedIndex, setIsExpandedIndex] = useState(0);
+
+  // const sampleImageObjects = imageFixtures.sampleImageObjects || [];
+  const sampleImageObjects = imageFixtures[categoryName] || [];
+  if (imageFixtures[categoryName] === undefined) {
+    console.log(`${categoryName} is not a valid category name`);
+  }
+
   return (
     <div>
       <div className={styles['wrapper']}>
         <div className={styles['accordion']}>
-          <div className={styles['accordion-panel']}>
-            <h3 id="panel1-header" className={styles['accordion-header']}>
-              <button
-                className={styles['accordion-trigger']}
-                aria-controls="panel1-content"
-                aria-expanded="true"
+          {sampleImageObjects.map((image, index) => {
+            return (
+              <div
+                className={styles['accordion-panel']}
+                aria-expanded={index === isExpandedIndex ? 'true' : 'false'}
               >
-                <span> Appetizers {categoryName} </span>
-                <svg aria-hidden="true" className={styles['accordion-icon']}>
-                  <use xlinkHref="#sampleSVG"></use>
-                  {/* <GrTrigger /> */}
-                  14
-                </svg>
-              </button>
-            </h3>
-            <div
-              className={styles['accordion-content']}
-              id="panel1-content"
-              area-labelledby="panel1-header"
-              aria-hidden="true"
-              role="region"
-            >
-              <p> description about menu item </p>
-              <img
-                className={`${styles['accordion-image']} ${styles['img']}']}}`}
-                src={sampleImages[1]}
-                alt="menu item"
-              />
-            </div>
-          </div>
-
-          <div className={styles['accordion-panel']}>
-            <h3 id="panel1-header" className={styles['accordion-header']}>
-              <button
-                className={styles['accordion-trigger']}
-                aria-controls="panel1-content"
-                area-expanded="false"
-              >
-                <span> Soups To Share {categoryName} </span>
-                <svg aria-hidden="true" className="accordion-icon">
-                  <use xlinkHref="#icon-chevron-down"></use>
-                </svg>
-              </button>
-            </h3>
-            <div
-              className={styles['accordion-content']}
-              id="panel1-content"
-              area-labelledby="panel1-header"
-              aria-hidden="true"
-              role="region"
-            >
-              <p> has image props </p>
-              <img
-                className={`${styles['accordion-image']} ${styles['img']}']}}`}
-                src={sampleImages[2]}
-                alt="menu item"
-              />
-            </div>
-          </div>
-
-          <div className={styles['accordion-panel']}>
-            <h3 id="panel1-header" className={styles['accordion-header']}>
-              <button
-                className={styles['accordion-trigger']}
-                aria-controls="panel1-content"
-                area-expanded="false"
-              >
-                <span> Soups To Share {categoryName} </span>
-                <svg aria-hidden="true" className="accordion-icon">
-                  <use xlinkHref="#icon-chevron-down"></use>
-                </svg>
-              </button>
-            </h3>
-            <div
-              className={styles['accordion-content']}
-              id="panel1-content"
-              area-labelledby="panel1-header"
-              aria-hidden="true"
-              role="region"
-            >
-              <p> description about menu item </p>
-              <img
-                className={`${styles['accordion-image']} ${styles['img']}']}}`}
-                src={sampleImages[3]}
-                alt="menu item"
-              />
-            </div>
-          </div>
+                <h3
+                  id={`panel${index}-header`}
+                  className={styles['accordion-header']}
+                >
+                  <button
+                    className={styles['accordion-trigger']}
+                    aria-controls={`panel${index}-content`}
+                    aria-expanded={index === isExpandedIndex ? 'true' : 'false'}
+                    onClick={() => setIsExpandedIndex(index)}
+                  >
+                    <span> {image.name} </span>
+                    <svg
+                      aria-hidden="true"
+                      className={styles['accordion-icon']}
+                    >
+                      <use xlinkHref="#sampleSVG"></use>
+                      {/* <GrTrigger /> */}
+                      {/* {image.catItemNum} */}
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  className={styles['accordion-content']}
+                  id="panel1-content"
+                  area-labelledby="panel1-header"
+                  // aria-hidden="true"
+                  // aria-hidden={index === isExpandedIndex ? 'false' : 'true'}
+                  role="region"
+                >
+                  <p> description about menu item </p>
+                  <img
+                    className={`${styles['accordion-image']} ${styles['img']}']}}`}
+                    src={image.url}
+                    alt="menu item"
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <svg
