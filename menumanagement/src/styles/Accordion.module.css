@@ -39,7 +39,7 @@
   /* border-radius: 6px; */
   border-radius: calc((var(--_panel-padding) + var(--_button-size)) / 2);
   overflow: hidden;
-  flex-basis: calc((var(--_panel-padding * 2)));
+  /* flex-basis: calc((var(--_panel-padding * 2))); */
   transition: flex-basis 500ms;
 }
 
