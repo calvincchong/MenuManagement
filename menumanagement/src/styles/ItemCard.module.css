@@ -7,7 +7,7 @@
   gap: 10px; */
   display: inline-grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 0.8fr;
+  grid-template-rows: 1fr minmax(0.25rem, 30px);
   position: relative;
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -49,6 +49,7 @@
   z-index: 5;
   right: 0.25rem;
   bottom: 0.25rem;
+  margin-top: 0.2em;
   color: orange;
   font-size: 1.8rem;
 }
@@ -65,7 +66,7 @@
     padding: 0.25em;
     display: inline-grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr minmax(0.25rem, 1fr);
+    grid-template-rows: 1fr minmax(0.3rem, 0.8fr);
     position: relative;
     border-radius: 0.25rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
