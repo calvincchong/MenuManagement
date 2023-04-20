@@ -18,6 +18,12 @@
   max-width: 30vw;
 }
 
+.container:after {
+  content: ' ';
+  background-color: rgba(179, 179, 179, 0.481);
+  max-width: 30vw;
+}
+
 .container h2 {
   font-style: bold;
   font-size: 1.1rem;
@@ -42,4 +48,16 @@
   grid-column-end: 3; */
   width: 33%;
   max-width: 33%;
+}
+
+.footer-nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0.5rem;
+  display: block;
+}
+
+.footer-nav a:where(:hover, :focus) {
+  color: #fff;
 }

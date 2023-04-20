@@ -113,3 +113,29 @@ a {
     color-scheme: dark;
   }
 } */
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsla(47, 92%, 53%, 0.356);
+  width: 3em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(31, 100%, 65%, 0.5);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(31, 100%, 65%, 0.7);
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: hsla(31, 100%, 65%, 0.5) hsla(47, 92%, 53%, 0.356);
+    scrollbar-width: thin;
+  }
+}

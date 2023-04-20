@@ -14,8 +14,8 @@ const Footer = () => {
         <div className={styles['footer-links-2']}>
           Malaysian Restaurant in Brooklyn NY
         </div>
-        <div className={styles['footer-links-3']}>some short description</div>
-        <p>&copy; 2021 legal</p>
+        <div className={styles['footer-links-3']}></div>
+        <p>&copy; 2023 legal</p>
       </footer>
     </>
   );
