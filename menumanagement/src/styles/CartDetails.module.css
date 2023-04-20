@@ -1,15 +1,23 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 70dvh;
+  appearance: none;
+}
+
 .cartCard {
   display: grid;
   position: relative;
   /* grid-template-columns: repeat(2, calc(50% - .5em), 1fr); */
   grid-template-columns: repeat(2, 2fr, 1fr);
-  grid-gap: .3rem;
+  grid-gap: 0.3rem;
   /* top: 30px; */
   border-top: solid 1px;
   border-top-color: beige;
-  padding: .75rem;
-  margin-top: .2rem;
-  margin-bottom: .5rem;
+  padding: 0.75rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   background-color: #fefdf9;
@@ -80,7 +88,7 @@
 
 .removeItemButton:hover {
   transition: opacity 0.3s;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 /* .adjustQuantityDiv::after {

@@ -12,6 +12,7 @@ import styles from './page.module.css';
 import tcss from '../../styles/globaltailwind';
 import Link from 'next/link';
 import getMenuDBSS from '../../lib/serversideDBCalls/getMenuDBSS';
+import Footer from '../../components/Footer';
 
 const headerTCSS =
   'max-h-xxxvh flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20 max-h-40';
@@ -41,24 +42,27 @@ const Menu = async () => {
   // console.log('this is database Items', databaseItems, 'typeof databaseItems', typeof databaseItems);
 
   return (
-    <div className={styles.menu}>
-      <NavBar />
-      <div className={styles.photoHeader}>
-        <div className="text-center mt-auto mb-auto">
-          <div>
-            <h1 className={tcss.h1white}>Our Menu</h1>
-          </div>
-          <div className="text-slate-50">
-            Homemade Malaysian Food - no passport needed
-          </div>
-          <div className="text-slate-50 py-2">
-            Call 718-827-1698 to place your order.
+    <>
+      <div className={styles.menu}>
+        <NavBar />
+        <div className={styles.photoHeader}>
+          <div className="text-center mt-auto mb-auto">
+            <div>
+              <h1 className={tcss.h1white}>Our Menu</h1>
+            </div>
+            <div className="text-slate-50">
+              Homemade Malaysian Food - no passport needed
+            </div>
+            <div className="text-slate-50 py-2">
+              Call 718-827-1698 to place your order.
+            </div>
           </div>
         </div>
+        <NotUpdatedMessage />
+        <OrderingApp items={databaseItems} categories={categories} />
+        {/* <Footer /> */}
       </div>
-      <NotUpdatedMessage />
-      <OrderingApp items={databaseItems} categories={categories} />
-    </div>
+    </>
   );
 };
 

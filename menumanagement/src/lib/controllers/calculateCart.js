@@ -8,17 +8,19 @@
  * @returns {number} - various prices of the Cart
  */
 const calculateCart = {
-  'preTax': (cart) => {
-    return cart.reduce((acc, item) => {
-      return acc + item.price;
-    }, 0).toFixed(2);
+  preTax: cart => {
+    return cart
+      .reduce((acc, item) => {
+        return acc + item.price;
+      }, 0)
+      .toFixed(2);
   },
-  'tax': (cart) => {
+  tax: cart => {
     return (calculatCart.preTax(cart) * 1.0875).toFixed(2);
   },
-  'total': (cart) => {
+  total: cart => {
     return (calculateCart.preTax(cart) * 1.0875).toFixed(2);
-  }
+  },
 };
 
 /**
@@ -26,8 +28,8 @@ const calculateCart = {
  * @returns {void} : sideeffect removes item from updates cart state and localstorage. CartState triggers re-render.
  * should remove the index of last matching item.
  */
-const removeFromCartAndSetStorage  = ( key, cart ) => {
-  let index = cart.findLastIndex((item) => item.menuName === key.menuName);
+const removeFromCartAndSetStorage = (key, cart) => {
+  let index = cart.findLastIndex(item => item.menuName === key.menuName);
   let newCart = [...cart.slice(0, index), ...cart.slice(index + 1)];
   return newCart;
 };
@@ -41,22 +43,25 @@ const removeFromCartAndSetStorage  = ( key, cart ) => {
 const addItemToCartAndSetStorage = (item, cart = []) => {
   if (typeof window !== 'undefined') {
     let cartFromStorage = localStorage.getItem('cart');
-    let newCart = cartFromStorage !== undefined & cartFromStorage !== null ? JSON.parse(cartFromStorage) : [];
+    let newCart =
+      (cartFromStorage !== undefined) & (cartFromStorage !== null)
+        ? JSON.parse(cartFromStorage)
+        : [];
     newCart = [...newCart, item];
     localStorage.setItem('cart', JSON.stringify(newCart));
     window.dispatchEvent(new Event('addItemToCart')); // Mechanism to update cart displaying number of items
   }
-}
+};
 
 const removeAllOfOneItemFromCart = (item, cart) => {
-  let newCart = cart.filter((cartItem) => cartItem.menuName !== item.menuName);
+  let newCart = cart.filter(cartItem => cartItem.menuName !== item.menuName);
   console.log('what is the new cart after remove', item, newCart);
   return newCart;
 };
 
 module.exports = {
-  'calculateCart': calculateCart,
-  'removeFromCartAndSetStorage': removeFromCartAndSetStorage,
-  'addItemToCartAndSetStorage': addItemToCartAndSetStorage,
-  'removeAllOfOneItemFromCart': removeAllOfOneItemFromCart,
+  calculateCart: calculateCart,
+  removeFromCartAndSetStorage: removeFromCartAndSetStorage,
+  addItemToCartAndSetStorage: addItemToCartAndSetStorage,
+  removeAllOfOneItemFromCart: removeAllOfOneItemFromCart,
 };

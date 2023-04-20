@@ -160,7 +160,13 @@ const ItemsTable = ({ items }) => {
               exit={{ opacity: 0 }}
             >
               {/* <Slideout key="slideout"> */}
-              <EditItemForm key="edititemform" item={editItem} />
+              <EditItemForm
+                key="edititemform"
+                item={editItem}
+                close={() => {
+                  setShowForm(false);
+                }}
+              />
               {/* </Slideout> */}
             </motion.div>
           )}
