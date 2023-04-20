@@ -106,7 +106,7 @@ const OrderingApp = ({ items, categories }) => {
                 className={styles.categorySections}
                 key={`header-${i}`}
               >
-                <div className="py-2">
+                <div className="pb-2">
                   <h2 className={tcss.h4}>{category}</h2>
                   <Accordion
                     key={`AccordComp0-${category}${i}`}

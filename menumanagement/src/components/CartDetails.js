@@ -1,42 +1,42 @@
-"use client";
-import { useState, useEffect } from "react";
-import styles from "../styles/CartDetails.module.css";
-import { HiChevronUp, HiChevronDown } from "react-icons/hi2";
-import { MdRemoveShoppingCart } from "react-icons/md";
+'use client';
+import { useState, useEffect } from 'react';
+import styles from '../styles/CartDetails.module.css';
+import { HiChevronUp, HiChevronDown } from 'react-icons/hi2';
+import { MdRemoveShoppingCart } from 'react-icons/md';
 import {
   calculateCart,
   removeFromCartAndSetStorage,
   addItemToCartAndSetStorage,
   removeAllOfOneItemFromCart,
-} from "../lib/controllers/calculateCart";
-import _ from "lodash";
+} from '../lib/controllers/calculateCart';
+import _ from 'lodash';
 
 const CartDetails = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     let storedCart =
-      localStorage.getItem("cart") !== undefined
-        ? JSON.parse(localStorage.getItem("cart"))
+      localStorage.getItem('cart') !== undefined
+        ? JSON.parse(localStorage.getItem('cart'))
         : [];
     setCart(storedCart);
 
-    window.addEventListener("addItemToCart", () => {
+    window.addEventListener('addItemToCart', () => {
       const items =
-        localStorage.getItem("cart") !== undefined
-          ? JSON.parse(localStorage.getItem("cart"))
+        localStorage.getItem('cart') !== undefined
+          ? JSON.parse(localStorage.getItem('cart'))
           : [];
       setCart(items || []);
     });
   }, []);
 
-  const groups = cart === null ? [] : _.groupBy(cart, "menuName");
+  const groups = cart === null ? [] : _.groupBy(cart, 'menuName');
 
   /**
    * @param {object} key : entire item object to add to cart
    * @returns {void} : sideeffect updates cart state and localstorage with additional item
    */
-  const incrementItem = (key) => {
+  const incrementItem = key => {
     addItemToCartAndSetStorage(key, cart);
     setCart([...cart, key]);
   };
@@ -46,18 +46,18 @@ const CartDetails = () => {
    * @returns {void} : sideeffect removes item from updates cart state and localstorage. CartState triggers re-render.
    * should remove the index of last matching item.
    */
-  const decrementItem = (key) => {
+  const decrementItem = key => {
     let newCart = removeFromCartAndSetStorage(key, cart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
-    window.dispatchEvent(new Event("removeItemFromCart"));
+    window.dispatchEvent(new Event('removeItemFromCart'));
   };
 
-  const removeItem = (key) => {
+  const removeItem = key => {
     let newCart = removeAllOfOneItemFromCart(key, cart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
-    window.dispatchEvent(new Event("removeItemFromCart"));
+    window.dispatchEvent(new Event('removeItemFromCart'));
   };
 
   // const orderTotal = cart.reduce((acc, item) => {
@@ -71,20 +71,20 @@ const CartDetails = () => {
 
   return (
     <>
-      <div className="text-2xl">Cart</div>
+      <div className="text-xl">Cart</div>
       <div>
-        {" "}
-        Total Items: <span className="text-xl">{cart ? cart.length : 0}</span>
+        {' '}
+        Total Items: <span className="text-l">{cart ? cart.length : 0}</span>
       </div>
 
       <div className="flex-col flex overflow-auto max-h-7vh appearance-none">
         {Object.keys(groups).map((key, i) => {
           const itemQuantity = groups[key].length;
           const item = groups[key][0];
-          const itemPrice = groups[key][0]["price"];
+          const itemPrice = groups[key][0]['price'];
 
           return (
-            <div key={"cartitem" + key} className={styles.cartCard}>
+            <div key={'cartitem' + key} className={styles.cartCard}>
               {/* <div className="flex-col w-8/12 basis-8/12"> */}
               <div
                 className={styles.removeItemButton}
