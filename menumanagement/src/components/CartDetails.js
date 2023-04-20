@@ -77,7 +77,8 @@ const CartDetails = () => {
         Total Items: <span className="text-l">{cart ? cart.length : 0}</span>
       </div>
 
-      <div className="flex-col flex overflow-auto max-h-7vh appearance-none">
+      <div className={styles['cart-container']}>
+        {/* <div className="flex-col flex overflow-auto max-h-7vh appearance-none"> */}
         {Object.keys(groups).map((key, i) => {
           const itemQuantity = groups[key].length;
           const item = groups[key][0];

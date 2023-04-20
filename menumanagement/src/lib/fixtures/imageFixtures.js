@@ -47,7 +47,7 @@ export const imageFixtures = {
     },
     {
       name: 'Shrimp Papaya Salad',
-      chineseName: '蝦仁木瓜沙律',
+      chineseName: '蝦仁木瓜沙拉',
       url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681934112/ShrimpSaladAppetizer_p1ptnw.jpg',
     },
   ],
