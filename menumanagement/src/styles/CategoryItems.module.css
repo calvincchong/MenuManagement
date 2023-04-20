@@ -14,7 +14,16 @@
 
 .twoCol {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - .5em));
-  grid-gap: .5em .5em;
+  grid-template-columns: repeat(2, calc(50% - 0.5em));
+  grid-gap: 0.5em 0.5em;
   /* top: 30px; */
+}
+
+@media (max-width: 640px) {
+  .twoCol {
+    display: grid;
+    /* grid-template-columns: repeat(1, calc(100% - 0.5em)); */
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 0.4rem;
+  }
 }

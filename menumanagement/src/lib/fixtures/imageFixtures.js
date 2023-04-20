@@ -37,14 +37,17 @@ export const imageFixtures = {
     {
       name: 'Lobak',
       catItemNum: 'A12',
+      chineseName: '滷肉',
       url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681918350/Lobak-min_ph9ovw.jpg',
     },
     {
       name: 'Satay',
+      chineseName: '沙爹鴛鴦',
       url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681934112/SatayYinYang_vcama9.jpg',
     },
     {
       name: 'Shrimp Papaya Salad',
+      chineseName: '蝦仁木瓜沙律',
       url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1681934112/ShrimpSaladAppetizer_p1ptnw.jpg',
     },
   ],

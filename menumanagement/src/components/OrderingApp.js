@@ -108,7 +108,10 @@ const OrderingApp = ({ items, categories }) => {
               >
                 <div className="py-2">
                   <h2 className={tcss.h4}>{category}</h2>
-                  <Accordion categoryName={category} />
+                  <Accordion
+                    key={`AccordComp0-${category}${i}`}
+                    categoryName={category}
+                  />
                 </div>
                 <CategoryItems items={itemsByCategory} />
               </div>

@@ -71,6 +71,13 @@
 .accordion-content > p {
   transform: translateY(3rem);
   opacity: 0;
+  transition: 500ms;
+  bottom: 0;
+}
+
+.accordion-panel:has([aria-expanded='true']) .accordion-content > p {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .accordion-trigger {
@@ -79,8 +86,12 @@
   align-items: center;
   /* gap: 1rem; */
   border: 0;
-  padding: 0;
+  padding: 0.5rem;
   flex-direction: row-reverse;
+  border-top-left-radius: calc(var(--_button-size));
+  border-top-right-radius: calc(var(--_button-size));
+  border-bottom-right-radius: calc(var(--_button-size));
+  border-bottom-left-radius: calc(var(--_button-size));
   /* display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,9 +99,38 @@
   cursor: pointer; */
 }
 
-.accordion-trigger:hover {
-  background-color: #ffb254;
+.accordion-panel:has([aria-expanded='false']) .accordion-trigger {
+  background-color: dcdcdc83;
+  border-top-left-radius: var(--_button-size);
+  border-top-right-radius: var(--_button-size);
+  font-size-adjust: 80%;
+  flex-direction: column-reverse;
 }
+
+.accordion-panel:has([aria-expanded='false']) .accordion-trigger:hover {
+  background-color: rgba(255, 196, 60, 0.551);
+  border-top-left-radius: var(--_button-size);
+  border-top-right-radius: var(--_button-size);
+}
+
+.accordion-panel:has([aria-expanded='false']) .a-panel-title {
+  display: none;
+  transition: 500ms;
+}
+
+.accordion-panel:has([aria-expanded='false']) .a-panel-title-vert {
+  line-height: 1.2;
+  /* display: block; */
+  transition: 500ms;
+}
+/* .accordion-panel:has([aria-expanded='true']) .a-panel-title {
+  display: none;
+  transition: 500ms;
+} */
+
+/* .accordion-trigger:hover {
+  background-color: rgba(255, 196, 60, 0.551);
+} */
 
 .accordion-header {
   border: black;
@@ -105,12 +145,26 @@
 }
 
 .accordion-icon {
-  fill: var(--_panel-color);
-  background: hsl(0 0% 0% / 0.25);
+  /* fill: var(--_panel-color); */
+  /* background: hsl(0 0% 0% / 0.25); */
   /* background: rgb(73, 69, 69); */
-  width: var(--_button-size);
-  padding: 0.75rem;
-  margin: 0.2rem;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
+  color: rgb(33, 30, 30);
+  /* width: var(--_button-size); */
+  /* padding: 0.75rem; */
+  /* margin: 0.2rem; */
+  /* border-radius: 50%; */
+  /* aspect-ratio: 1 / 1; */
+}
+
+.accordion-panel:has([aria-expanded='false']) .accordion-icon {
+  transform: rotate(90deg);
+  transition: 1000ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .accordion-panel {
+    /* flex-direction: column; */
+    height: 180px;
+    transition: flex-basis 500ms;
+  }
 }
