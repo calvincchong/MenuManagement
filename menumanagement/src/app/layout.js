@@ -1,5 +1,6 @@
 import './globals.css';
 import Providers from './Providers';
+import Analytics from '../components/Analytics';
 
 export default function RootLayout({ children }) {
   return (
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
+        <Analytics />
         <Providers>{children}</Providers>
       </body>
     </html>

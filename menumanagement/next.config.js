@@ -3,14 +3,18 @@ const nextConfig = {
   experimental: {
     appDir: true,
     // topLevelAwait: true
-    serverComponentsExternalPackages: ["mongoose", "bcrypt"]
+    serverComponentsExternalPackages: ['mongoose', 'bcrypt'],
   },
   webpack(config) {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
   images: {
-    domains: ['**.rasamalaysia.com', 'res.cloudinary.com', 'www.koookoochicken.com'],
+    domains: [
+      '**.rasamalaysia.com',
+      'res.cloudinary.com',
+      'www.koookoochicken.com',
+    ],
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -25,6 +29,6 @@ const nextConfig = {
   //   // return modified config
   //   return config;
   // }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
