@@ -21,9 +21,25 @@
   transition: transform 500ms;
 }
 
+.categoryContainerSelected {
+  background-color: hsla(33, 100%, 50%, 0.483);
+  align-items: center;
+  align-content: center;
+  margin: 0 0 0.2rem 0;
+  padding: 3px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease-in-out;
+  overflow-x: wrap;
+  transition: transform 500ms;
+}
+
 .categoryContainer:hover {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   transform: scale(1.05);
+}
+
+.checkbox {
+  display: none;
 }
 
 /* @media (max-device-width: 500px) { */
