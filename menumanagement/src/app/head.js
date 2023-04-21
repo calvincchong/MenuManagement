@@ -1,12 +1,38 @@
 'use client';
 import { useEffect } from 'react';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { gtmId, pageview } from '../lib/gtm';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Head() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const url = pathname + searchParams.toString();
+    if (pathname) {
+      pageview(url);
+    }
+  }, [pathname, searchParams]);
+
+  // useEffect(() => {
+  //   router.events.on('routeChangeComplete', pageview);
+  //   return () => {
+  //     router.events.off('routeChangeComplete', pageview);
+  //   };
+  // }, [router.events]);
+
   return (
     <>
+      <title>Koo Koo Chicken</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta
+        name="description"
+        content="Malaysian Comfort Food in Brooklyn NY"
+      />
+      <link rel="icon" href="/favicon.ico" />
       <Script
         id="gtag-base"
         strategy="afterInteractive"
@@ -20,13 +46,6 @@ export default function Head() {
           `,
         }}
       />
-      <title>Koo Koo Chicken</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta
-        name="description"
-        content="Malaysian Comfort Food in Brooklyn NY"
-      />
-      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }
