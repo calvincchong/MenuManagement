@@ -16,12 +16,12 @@ export default function Analytics() {
     }
   }, [pathname, searchParams]);
 
-  if (
-    process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' ||
-    process.env.NEXT_PUBLIC_VERCEL_ENV !== 'preview'
-  ) {
-    return null;
-  }
+  // if (
+  //   process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' ||
+  //   process.env.NEXT_PUBLIC_VERCEL_ENV !== 'preview'
+  // ) {
+  //   return null;
+  // }
 
   return (
     <>
