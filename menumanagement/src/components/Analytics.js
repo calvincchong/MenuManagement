@@ -25,6 +25,14 @@ export default function Analytics() {
 
   return (
     <>
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -37,15 +45,7 @@ export default function Analytics() {
             })(window,document,'script','dataLayer', '${gtmId}');
           `,
         }}
-      />{' '}
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
+      />
     </>
   );
 }
