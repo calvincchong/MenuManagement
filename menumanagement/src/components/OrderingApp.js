@@ -94,7 +94,7 @@ const OrderingApp = ({ items, categories }) => {
         }
       >
         <MenuFilter categories={categories} />
-        <div className="w-12/12 sm:w-9/12 md:w-9/12">
+        <div className="w-12/12 sm:w-12/12 md:w-9/12">
           {categories.filter(filterCategories).map((category, i) => {
             const itemsByCategory = items.filter(item => {
               return item.category === category;
