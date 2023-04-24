@@ -2,6 +2,7 @@
 import AddItemForm from '../../components/AddItemForm';
 import tcss from '../../styles/globaltailwind';
 import DragCarousel from '../../components/DragCarousel';
+import Footer from '../../components/Footer';
 
 const heading =
   'mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white';
@@ -15,9 +16,10 @@ const InternalDirectory = () => {
       <div className="flex justify-center mt-5 ">
         <h1 className={tcss.h1}>Internal Directory</h1>
       </div>
-      <div className="border-2 flex justify-center p-3">
+      {/* <div className="border-2 flex justify-center p-3">
         <AddItemForm />
-      </div>
+      </div> */}
+      <Footer />
     </div>
   );
 };
