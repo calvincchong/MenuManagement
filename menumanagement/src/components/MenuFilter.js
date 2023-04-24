@@ -29,7 +29,7 @@ const MenuFilter = ({ categories }) => {
         {categories.map((category, i) => {
           let bgStyle =
             selectedCategory.value === category
-              ? styles.categoryContainerSelected
+              ? `${styles.categoryContainer} ${styles.selected}`
               : styles.categoryContainer;
 
           return (
