@@ -1,5 +1,7 @@
-import './globals.css'
+import './globals.css';
 import Providers from './Providers';
+import Analytics from '../components/Analytics';
+import { gtmId, pageview } from '../lib/gtm';
 
 export default function RootLayout({ children }) {
   return (
@@ -10,10 +12,19 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Providers>
+          {/* <Analytics /> */}
           {children}
         </Providers>
       </body>
     </html>
-  )
+  );
 }

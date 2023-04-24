@@ -36,7 +36,7 @@ const Accordion = ({ categoryName, num, images }) => {
                 className={styles['accordion-panel']}
                 aria-expanded={index === isExpandedIndex ? 'true' : 'false'}
               >
-                <h3
+                <div
                   key={`panel${categoryName}${index}-header`}
                   id={`panel${index}-header`}
                   className={styles['accordion-header']}
@@ -78,7 +78,7 @@ const Accordion = ({ categoryName, num, images }) => {
                     {/* {image.catItemNum} */}
                     {/* </svg> */}
                   </button>
-                </h3>
+                </div>
                 <div
                   key={`panel${categoryName}${index}-content`}
                   className={styles['accordion-content']}

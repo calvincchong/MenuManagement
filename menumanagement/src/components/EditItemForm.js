@@ -100,6 +100,10 @@ const EditItemForm = ({ item, close }) => {
               <input {...register('price')} />
             </div>
             <div>
+              <label className={labelCSS}>Order</label>
+              <input {...register('order')} />
+            </div>
+            <div>
               <h2 className={styles['section-title']}>Existing Options</h2>
               <div>
                 {item.options.map((option, idx) => {

@@ -1,0 +1,40 @@
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Canterell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* padding: 20%; */
+  margin: 0 20%;
+}
+
+.item {
+  min-height: 40rem;
+  min-width: 30rem;
+  padding: 40px;
+  scroll-snap-align: start;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  pointer-events: none;
+}
+
+.inner-carousel {
+  display: flex;
+  /* flex-direction: row; */
+  background-color: lightblue;
+  scroll-snap-type: x;
+  scroll-padding: 50%;
+}
+
+.carousel {
+  border: 2px;
+  border-style: solid;
+  border-color: rgb(255, 204, 95);
+  cursor: grab;
+  overflow: hidden;
+}

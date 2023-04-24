@@ -16,7 +16,7 @@
 .menu {
   flex-direction: column;
   justify-content: center;
-  top:30px;
+  top: 30px;
 }
 
 .menuSection {
@@ -44,13 +44,13 @@
   /* background-position: center; */
   background-attachment: no-repeat;
   background-attachment: fixed;
-  background-image: url('https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg');
+  background-image: url('https://res.cloudinary.com/dq6rqplja/image/upload/v1682348015/SUB500/HEADER_IMAGE_WIDE_jni1af.jpg');
   background-size: 100% auto;
   /* background-size: cover; */
   /* min-height: fit-content; */
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .photoHeader {
     background-attachment: initial;
     background-size: 100% 100%;
