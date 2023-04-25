@@ -1,5 +1,11 @@
 // Abstract some details regarding fetcher - APIs always return data.
 export const fetcher = async ({ url, method, body, json = true }) => {
+  console.log('fetch is running', {
+    url,
+    method,
+    body,
+    json,
+  });
   const res = await fetch(url, {
     method: method,
     ...(body && { body: JSON.stringify(body) }),
@@ -9,11 +15,10 @@ export const fetcher = async ({ url, method, body, json = true }) => {
     },
   });
 
-  console.log('fail here', res);
-
   // Error handling
   // TODO: Proper Error Handling for with fetch fails;
   if (!res.ok) {
+    console.log('fail here', res);
     throw new Error('An error occurred while fetching the data.');
   }
 
@@ -52,6 +57,15 @@ export const editMenuItem = async item => {
     url: '/api/menu',
     method: 'PUT',
     body: item,
+    json: true,
+  });
+};
+
+export const getMenuItems = async () => {
+  return fetcher({
+    url: '/api/menu',
+    body: null,
+    method: 'GET',
     json: true,
   });
 };

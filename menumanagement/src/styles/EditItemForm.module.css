@@ -17,6 +17,8 @@
   background-color: beige;
   margin: auto;
   padding: 2rem;
+  position: relative;
+  border-radius: 1.5rem;
 }
 
 .inline-icon {
@@ -49,4 +51,48 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  /* width: 100%; */
+}
+
+/* .form-fields {
+  display: flex;
+  flex-direction: column;
+} */
+.text-fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.input-box {
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.01);
+  text-align: center;
+}
+
+.two-col-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .two-col-fields {
+  width: 100%;
+  text-align: center;
+} */
+
+.close-button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: rgb(255, 51, 51);
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.close-button:hover {
+  background-color: rgb(147, 47, 47);
 }

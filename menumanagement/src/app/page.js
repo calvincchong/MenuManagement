@@ -14,8 +14,9 @@ import Link from 'next/link';
 import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
 import Footer from '../components/Footer';
 // import { getMenuItems } from '../lib/api';
+import { headers } from 'next/headers';
 
-export const revalidate = 0;
+export const revalidate = 3600;
 export const dynamicParams = true;
 
 const headerTCSS =
@@ -24,32 +25,26 @@ const menuDivStyle = 'border-solid border-indigo-500 border-2';
 
 // let DB2Items = await getMenuItems();
 // console.log('is DB2Items');
-let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
-databaseItems = JSON.parse(databaseItems);
-const isMostRecentMenu = databaseItems.length > 0 ? true : false;
-databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
 
 const NotUpdatedMessage = () => {
-  if (isMostRecentMenu) {
-    return null;
-  } else {
-    return (
-      <div className={styles.notUpdatedMessage}>
-        <p className="text-red-500">
-          Note that this is not the most recent menu. Please try reloading the
-          page for the most recent menu. We apologize for the inconvenience.
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div className={styles.notUpdatedMessage}>
+      <p className="text-red-500">
+        Note that this is not the most recent menu. Please try reloading the
+        page for the most recent menu. We apologize for the inconvenience.
+      </p>
+    </div>
+  );
 };
 
-// res.setHeader(
-//   'Cache-Control',
-//   'public, s-maxage=10, stale-while-revalidate=59',
-// );
-
 const Menu = async (req, res) => {
+  const headersList = headers();
+
+  let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
+  databaseItems = JSON.parse(databaseItems);
+  const isMostRecentMenu = databaseItems.length > 0 ? true : false;
+  databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
+
   // res.setHeader(
   //   'Cache-Control',
   //   'public, s-maxage=10, stale-while-revalidate=59',
@@ -74,7 +69,7 @@ const Menu = async (req, res) => {
             </div>
           </div>
         </div>
-        <NotUpdatedMessage />
+        {!isMostRecentMenu ? <NotUpdatedMessage /> : null}
         <OrderingApp items={databaseItems} categories={categories} />
         {/* <Footer /> */}
       </div>

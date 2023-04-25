@@ -1,6 +1,5 @@
 import { mongoose, Schema } from 'mongoose';
 // import * as dotenv from 'dotenv';
-// dotenv.config();
 import dynamic from 'next/dynamic';
 
 // Warns issue if Mongodb is not set up
@@ -23,7 +22,6 @@ if (!cached) {
 }
 
 export const db = async () => {
-  console.log(`connection is ${cached.conn}`);
   if (cached.conn) {
     return cached.conn;
   }
