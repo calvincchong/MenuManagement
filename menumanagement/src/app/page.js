@@ -20,6 +20,11 @@ const menuDivStyle = 'border-solid border-indigo-500 border-2';
 
 let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
 databaseItems = JSON.parse(databaseItems);
+console.log(
+  'is the mainpage receiving data from db',
+  typeof databaseItems,
+  databaseItems,
+);
 const isMostRecentMenu = databaseItems.length > 0 ? true : false;
 databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
 

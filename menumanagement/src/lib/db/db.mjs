@@ -23,6 +23,7 @@ if (!cached) {
 }
 
 export const db = async () => {
+  console.log(`connection is ${cached.conn}`);
   if (cached.conn) {
     return cached.conn;
   }
