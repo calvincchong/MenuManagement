@@ -1,48 +1,85 @@
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
+import {
+  getMenuFixtures,
+  getMenuFixturesFromJSON,
+} from '../lib/getMenuFixtures';
+import { categories } from '../lib/categoryFixtures';
+import { CategoryItems } from '../components/CategoryItems';
+import { ItemCard } from '../components/ItemCard';
+import OrderingApp from '../components/OrderingApp';
+import MenuLink from '../components/MenuLink';
+import NavBar from '../components/NavBar';
 import styles from './page.module.css';
+import tcss from '../styles/globaltailwind';
+import Link from 'next/link';
+import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
+import Footer from '../components/Footer';
+// import { getMenuItems } from '../lib/api';
 
-const inter = Inter({ subsets: ['latin'] });
+export const revalidate = 0;
+export const dynamicParams = true;
 
-export default function Home() {
+const headerTCSS =
+  'max-h-xxxvh flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1682348015/SUB500/HEADER_IMAGE_WIDE_jni1af.jpg)] min-h-fit min-h-20 max-h-40';
+const menuDivStyle = 'border-solid border-indigo-500 border-2';
+
+// let DB2Items = await getMenuItems();
+// console.log('is DB2Items');
+let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
+databaseItems = JSON.parse(databaseItems);
+const isMostRecentMenu = databaseItems.length > 0 ? true : false;
+databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
+
+const NotUpdatedMessage = () => {
+  if (isMostRecentMenu) {
+    return null;
+  } else {
+    return (
+      <div className={styles.notUpdatedMessage}>
+        <p className="text-red-500">
+          Note that this is not the most recent menu. Please try reloading the
+          page for the most recent menu. We apologize for the inconvenience.
+        </p>
+      </div>
+    );
+  }
+};
+
+// res.setHeader(
+//   'Cache-Control',
+//   'public, s-maxage=10, stale-while-revalidate=59',
+// );
+
+const Menu = async (req, res) => {
+  // res.setHeader(
+  //   'Cache-Control',
+  //   'public, s-maxage=10, stale-while-revalidate=59',
+  // );
+
+  // console.log('this is database Items', databaseItems, 'typeof databaseItems', typeof databaseItems);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        {/* <p>Malaysian Comfort Foods</p> */}
-      </div>
-
-      <div className={styles.center}>
-        <div>
-          <h2> Koo Koo Chicken </h2>
+    <>
+      <div className={styles.menu}>
+        <NavBar />
+        <div className={styles.photoHeader}>
+          <div className="text-center mt-auto mb-auto">
+            <div>
+              <h1 className={tcss.h1white}>Our Menu</h1>
+            </div>
+            <div className="text-slate-50">
+              Homemade Malaysian Food - no passport needed
+            </div>
+            <div className="text-slate-50 py-2">
+              Call 718-827-1698 to place your order.
+            </div>
+          </div>
         </div>
-        <div>茨廠街</div>
-        <div>
-          <p>Malaysian Comfort Foods</p>
-        </div>
+        <NotUpdatedMessage />
+        <OrderingApp items={databaseItems} categories={categories} />
+        {/* <Footer /> */}
       </div>
-
-      <div className={styles.grid}>
-        <a href="/menu" className={styles.card}>
-          <h2 className={inter.className}>
-            Menu <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Check out our takeout menu</p>
-        </a>
-
-        <a href="" className={styles.card} target="_blank">
-          <h2 className={inter.className}>
-            We're located at <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>1698 86th St, Brooklyn NY 11214</p>
-        </a>
-
-        <a href="" className={styles.card}>
-          <h2 className={inter.className}>
-            About Us <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Learn More About Us</p>
-        </a>
-      </div>
-    </main>
+    </>
   );
-}
+};
+
+export default Menu;

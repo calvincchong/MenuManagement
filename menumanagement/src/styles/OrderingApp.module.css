@@ -74,21 +74,27 @@
 /**
  * @media queries for mobile devices
  */
-@media (max-device-width: 640px) {
+@media (max-width: 640px) {
   .categorySections {
-    margin: 12px;
+    margin: 10px;
   }
 
   .menuContainerWithCart {
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     padding-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .menuContainerWithCart {
+  .menuContainerWithoutCart {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
   }
 
   .slideout {

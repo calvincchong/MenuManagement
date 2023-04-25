@@ -3,34 +3,55 @@ import { mongoose, Schema } from 'mongoose';
 // dotenv.config();
 import dynamic from 'next/dynamic';
 
-console.log('whats my username', process.env.MONGODB_USERNAME)
-
+// Warns issue if Mongodb is not set up
 if (!process.env.MONGODB_USERNAME || !process.env.MONGODB_PASSWORD) {
   console.log('Add your MongoDB username and password to .env.local');
+  throw new Error(
+    'Please define MongoDB_USERNAME, MongoDB_PASSWORD and MongoDB_DB inside .env.local',
+  );
 }
 
 const username = encodeURIComponent(process.env.MONGODB_USERNAME);
 const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
-const collectionName = encodeURIComponent("Restaurant");
-
+const collectionName = encodeURIComponent('Restaurant');
 const connection = `mongodb+srv://${username}:${password}@cluster0.eaoousv.mongodb.net/${collectionName}?retryWrites=true&w=majority`;
 
-export const db = async () => {
-  mongoose.connect(`${connection}`, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then((res) => {
-    console.log(`Connected to MongoDB at 127.0.0.1:27017 ${res}`);
-  })
-  .catch((error) => {
-    console.log(`could not connect due to ${error}`);
-  })
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
 }
 
-// console.log('dude at least the module works');
+export const db = async () => {
+  console.log(`connection is ${cached.conn}`);
+  if (cached.conn) {
+    return cached.conn;
+  }
 
-// const connection = 'mongodb://127.0.0.1/Restaurant';
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false,
+    };
+
+    cached.promise = mongoose.connect(`${connection}`, opts).then(mongoose => {
+      return mongoose;
+    });
+  }
+
+  try {
+    cached.conn = await cached.promise;
+    console.log(`connected to ${cached.conn}`);
+  } catch (error) {
+    console.log(error);
+    cached.promise = null;
+    throw error;
+  }
+
+  return cached.conn;
+};
 
 // export const db = async () => {
-//   mongoose.connect(`${connection}`)
+//   mongoose.connect(`${connection}`, {useNewUrlParser: true, useUnifiedTopology: true})
 //   .then((res) => {
 //     console.log(`Connected to MongoDB at 127.0.0.1:27017 ${res}`);
 //   })
@@ -38,3 +59,18 @@ export const db = async () => {
 //     console.log(`could not connect due to ${error}`);
 //   })
 // }
+
+// console.log('dude at least the module works');
+
+// const connection = 'mongodb://127.0.0.1/Restaurant';
+
+// export const db = async () => {
+//   mongoose
+//     .connect(`${connection}`)
+//     .then(res => {
+//       console.log(`Connected to MongoDB at 127.0.0.1:27017 ${res}`);
+//     })
+//     .catch(error => {
+//       console.log(`could not connect due to ${error}`);
+//     });
+// };

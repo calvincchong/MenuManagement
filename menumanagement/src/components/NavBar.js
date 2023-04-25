@@ -1,7 +1,7 @@
 'use client';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import {toggleCart} from '../store/reducers/cartSlice';
+import { toggleCart } from '../store/reducers/cartSlice';
 import ShoppingCart from './ShoppingCart';
 import styles from '../styles/NavBar.module.css';
 import Link from 'next/link';
@@ -14,30 +14,36 @@ const NavBar = () => {
   return (
     // className="flex flex-wrap justify-between space-x-4 mx-auto max-w-screen-xl max-hd-[40px] drop-shadow-sm border-blue-50 border-b-2"
     <div className={`${styles.widecontainer}`}>
-    <div className={`${styles.container}`}>
-     {/* <div> Koo Koo Logo </div> */}
-     <div>
-      <div className="grid grid-cols-2 max-h-[64]">
-        <div><Lottie className={`${styles.kookooicon}`} animationData={chicken_header} loop={true} /></div>
-        <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
-      </div>
-     </div>
+      <div className={`${styles.container}`}>
+        {/* <div> Koo Koo Logo </div> */}
+        <div>
+          <div className="grid grid-cols-2 max-h-[64]">
+            <div>
+              <Lottie
+                className={`${styles.kookooicon}`}
+                animationData={chicken_header}
+                loop={true}
+              />
+            </div>
+            <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
+          </div>
+        </div>
 
-      <div className="hidden sm:flex">
-        <ul className="flex mt-2 font-thin flex-row text-sm lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
-          <li>
-            <Link href='/'>Home</Link>
-          </li>
-          <li>
+        <div className="hidden sm:flex">
+          <ul className="flex mt-2 font-thin flex-row text-sm lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            {/* <li>
             <Link href='/menu'>Menu</Link>
-          </li>
-        </ul>
-      </div>
+          </li> */}
+          </ul>
+        </div>
 
-      <ShoppingCart />
+        <ShoppingCart />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
 export default NavBar;
