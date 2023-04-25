@@ -16,7 +16,7 @@ import Button from './Reusables/Button';
 import { cleanEditFormData } from '../lib/controllers/cleanEditFormData';
 import { editMenuItem } from '../lib/api';
 
-const labelCSS = 'block text-gray-700 text-sm font-bold mb-2 w-100';
+const labelCSS = 'block text-gray-700 text-sm font-bold mt-2 w-100';
 
 // TODO: HANDLE THE CASE OF REMOVING AN OPTION.
 // TODO: HANDLE DYNAMIC FIELDS FOR OPTIONS
@@ -33,6 +33,7 @@ const EditItemForm = ({ item, close }) => {
       description: item.description,
       price: item.price,
       options: item.options,
+      order: item.order,
     },
   });
   const { fields, append, remove } = useFieldArray({
@@ -45,6 +46,7 @@ const EditItemForm = ({ item, close }) => {
   // TODO: HANDLE GET OPTIONS FROM DATABASE ->
   const onSubmit = async data => {
     console.log('hellooooo clicked onsubmit', item.id);
+    console.log('what is the price after changing', data.price);
     let cleanedData = JSON.stringify(cleanEditFormData(data, item.id));
     let res = await editMenuItem(cleanedData);
     console.log('this is the result of the put call', res);
@@ -58,51 +60,54 @@ const EditItemForm = ({ item, close }) => {
 
   return (
     <div className={styles.container}>
-      <div className="absolute inset-x-0 top-10">
-        <button
-          className="block m-auto bg-red-200 hover: bg-red-600 rounded-full px-2"
-          onClick={close}
-        >
+      <div className={styles.formContainer}>
+        {/* <div className="absolute right-0 top-10"> */}
+        <button className={styles['close-button']} onClick={close}>
           x
         </button>
-      </div>
-      {errorMessage && (
-        <p className="bg-red-100">
-          {errorMessage} There was an error in the attempt to update the item.
-          The Item was not updated.
-        </p>
-      )}
-      {isUpdateSuccess && (
-        <p className="bg-green">The Item was successfully updated.</p>
-      )}
-      <div className={styles.formContainer}>
-        Edit {item.menuName}
+        {/* </div> */}
+        <p className={styles['section-title']}>Edit {item.menuName}</p>
         <div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="w-full">
+            <div className={styles['text-fields']}>
               <label className={labelCSS}>English Name</label>
-              <input {...register('name')} />
+              <input className={styles['input-box']} {...register('name')} />
             </div>
-            <div className="w-full">
+            <div className={styles['text-fields']}>
               <label className={labelCSS}>Chinese Name test</label>
-              <input {...register('chineseName')} />
+              <input
+                className={styles['input-box']}
+                {...register('chineseName')}
+              />
             </div>
-            <div>
-              <label className={labelCSS}>category</label>
-              <input {...register('category')} />
+            <div className={styles['text-fields']}>
+              <label className={labelCSS}>Category</label>
+              <input
+                className={styles['input-box']}
+                {...register('category')}
+              />
             </div>
-            <div>
+            <div className={styles['text-fields']}>
               <label className={labelCSS}>Description</label>
-              <input {...register('description')} />
+              <textarea
+                className={styles['input-box']}
+                {...register('description')}
+              />
             </div>
-            <div>
-              <label className={labelCSS}>Price</label>
-              <input {...register('price')} />
+            <div className={styles['two-col-fields']}>
+              <div className={styles['text-fields']}>
+                <label className={labelCSS}>Price</label>
+                <input
+                  className={styles['input-box']}
+                  {...register('price', { valueAsNumber: true })}
+                />
+              </div>
+              <div className={styles['text-fields']}>
+                <label className={labelCSS}>Order</label>
+                <input className={styles['input-box']} {...register('order')} />
+              </div>
             </div>
-            <div>
-              <label className={labelCSS}>Order</label>
-              <input {...register('order')} />
-            </div>
+
             <div>
               <h2 className={styles['section-title']}>Existing Options</h2>
               <div>
@@ -111,27 +116,31 @@ const EditItemForm = ({ item, close }) => {
                   return (
                     <div
                       key={`${option.name}_${idx}`}
-                      className="flex justify-center"
+                      className={styles['two-col-fields']}
                     >
-                      <label className={styles['input-label']}>
-                        Option Name
-                      </label>
-                      <input
-                        key={`${option.name}_${idx}`}
-                        defaultValue={option.name}
-                        {...register(`options[${idx}].name`)}
-                      />
-                      <label className={styles['input-label']}>Price</label>
-                      <input
-                        key={`${option.price}_${idx}`}
-                        defaultValue={option.price}
-                        {...register(`options[${idx}].price`, {
-                          valueAsNumber: true,
-                        })}
-                        // {...register(`${option.name}.price`)}
+                      <div>
+                        <label className={styles['input-label']}>
+                          Option Name
+                        </label>
+                        <input
+                          key={`${option.name}_${idx}`}
+                          defaultValue={option.name}
+                          {...register(`options[${idx}].name`)}
+                        />
+                      </div>
+                      <div>
+                        <label className={styles['input-label']}>Price</label>
+                        <input
+                          key={`${option.price}_${idx}`}
+                          defaultValue={option.price}
+                          {...register(`options[${idx}].price`, {
+                            valueAsNumber: true,
+                          })}
+                          // {...register(`${option.name}.price`)}
 
-                        // {register()}
-                      />
+                          // {register()}
+                        />
+                      </div>
                     </div>
                   );
                 })}
@@ -179,6 +188,15 @@ const EditItemForm = ({ item, close }) => {
               className="w-full bg-emerald-300 hover:bg-emerald-500 rounded mt-1 py-1"
               type="submit"
             />
+            {isUpdateSuccess && (
+              <p className="bg-green">The Item was successfully updated.</p>
+            )}
+            {errorMessage && (
+              <p className="bg-red-100">
+                {errorMessage} There was an error in the attempt to update the
+                item. The Item was not updated.
+              </p>
+            )}
           </form>
         </div>
       </div>
