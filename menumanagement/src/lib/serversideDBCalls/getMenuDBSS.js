@@ -1,6 +1,8 @@
 import { db } from '../db/db.mjs';
 import { menuItems } from '../models/menuItems.mjs';
 
+export const revalidate = 10;
+
 // get menu serverside; database connection is made once when calling menu item
 // output-type: ARRAY:  returns a formatted array of menu objects || returns an empty array if connection to DB fails.
 export default async function getMenuDBSS() {
