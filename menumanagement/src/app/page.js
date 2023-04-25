@@ -15,7 +15,8 @@ import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
 import Footer from '../components/Footer';
 // import { getMenuItems } from '../lib/api';
 
-export const revalidate = 10;
+export const revalidate = 0;
+export const dynamicParams = true;
 
 const headerTCSS =
   'max-h-xxxvh flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1682348015/SUB500/HEADER_IMAGE_WIDE_jni1af.jpg)] min-h-fit min-h-20 max-h-40';
