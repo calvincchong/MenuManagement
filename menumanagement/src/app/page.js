@@ -14,6 +14,7 @@ import Link from 'next/link';
 import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
 import Footer from '../components/Footer';
 // import { getMenuItems } from '../lib/api';
+import { headers } from 'next/headers';
 
 export const revalidate = 0;
 export const dynamicParams = true;
@@ -50,6 +51,8 @@ const NotUpdatedMessage = () => {
 // );
 
 const Menu = async (req, res) => {
+  const headersList = headers();
+
   // res.setHeader(
   //   'Cache-Control',
   //   'public, s-maxage=10, stale-while-revalidate=59',
