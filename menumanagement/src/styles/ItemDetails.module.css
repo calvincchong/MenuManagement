@@ -1,49 +1,50 @@
 /* @media (max-device-width: 640px) { */
-  .modalContainer {
-    z-index: 300;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    min-height: 100vh;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: rgba(250, 216, 174, 0.41);
-    background-color: rgba(103, 103, 103, 0.41);
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
+.modalContainer {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(250, 216, 174, 0.41);
+  background-color: rgba(103, 103, 103, 0.41);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
-  .detailsContainer {
-    position: relative;
-    /* display: block; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    max-width: 1280px;
-    max-height: 80vh;
-    margin-top: auto;
-    margin-bottom: auto;
-    background-color: white;
-    filter: drop-shadow(0 0 0.75rem rgba(125, 106, 109, 0.435));
-    padding: 2rem .5rem 2rem .5rem;
-  }
+.detailsContainer {
+  position: relative;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  max-width: 940px;
+  max-height: 80vh;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: white;
+  filter: drop-shadow(0 0 0.75rem rgba(125, 106, 109, 0.435));
+  padding: 2rem 0.5rem 2rem 0.5rem;
+}
 
-  .itemHeader {
-    font-size: 1.2em;
-  }
+.item-header {
+  font-size: 1.2rem;
+  color: brown;
+}
 
-  .imageContainer {
-    position: relative;
-    width: 100%;
-    height: 20vh;
-  }
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
 /* } */
 
 .closeButton {
@@ -79,4 +80,11 @@
   background-color: rgb(247, 184, 67);
   margin-top: 10px;
   font-size: 1rem;
+}
+
+.item-description {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px 0 10px;
 }
