@@ -71,7 +71,7 @@ const Menu = async (req, res) => {
         </div>
         {!isMostRecentMenu ? <NotUpdatedMessage /> : null}
         <OrderingApp items={databaseItems} categories={categories} />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
