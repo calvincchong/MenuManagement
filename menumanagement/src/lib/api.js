@@ -69,3 +69,16 @@ export const getMenuItems = async () => {
     json: true,
   });
 };
+
+export const sendWelcomeEmailSignUp = async ({ email }) => {
+  return fetcher({
+    url: '/api/sendgrid',
+    method: 'POST',
+    body: {
+      email,
+      emailSubject: `Welcome to the club!`,
+      emailType: 'template',
+    },
+    json: true,
+  });
+};
