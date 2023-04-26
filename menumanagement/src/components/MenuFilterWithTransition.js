@@ -71,7 +71,7 @@ const MenuFilterWithTransition = ({ categories }) => {
                     transition={{
                       type: 'spring',
                       bounce: 0.2,
-                      duration: 0.75,
+                      duration: 0.8,
                     }}
                   />
                 )}
