@@ -1,0 +1,35 @@
+.primary-footer-form {
+  display: grid;
+  align-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .primary-footer-form {
+    margin-inline: auto;
+  }
+}
+
+.email-input {
+  margin: auto;
+  border-radius: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: rgb(44, 43, 43);
+}
+
+.email-button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 80vmax;
+  padding: 0.5rem 0.5em;
+  font-weight: 600;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+  background-color: hsla(44, 94%, 58%, 0.592);
+}
+
+.error-message {
+  font-size: 0.6rem;
+  color: red;
+}
