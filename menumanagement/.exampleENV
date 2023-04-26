@@ -1,18 +1,24 @@
+# COPY AND PASTE THIS INTO AN ENV FILE OR ENVIRONMENT VARIABLES IN DEPLOYMENT ENVIRONMENT
 # .env
 MONGODB_USERNAME= #mustbeEncoded
 MONGODB_PASSWORD= #mustbeEncoded
-MONGO_DB_NAME=
+MONGO_DB_NAME=YOURMONGODBNAME
 MONGODB_URI= #MongodbURI_Must_be_encoded
 MONGO_API_KEY=Your_API_Key
 
 # JSON WEB TOKENS
-JWT_COOKIE_NAME=
+JWT_COOKIE_NAME=NAMEOFYOURJWT #Used in BCRYPT Custom Sign In, maybe replaced
 JWT_SECRET=YourJWTAuthToken
 
 # GOOGLE TAG MANAGER
 # SPECIFY DEV ENVIRONMENT FOR GTM TO RUN IN
-NEXT_PUBLIC_VERCEL_ENV='production'
-NEXT_PUBLIC_GTM_ID= 'G-##########'
+NEXT_PUBLIC_VERCEL_ENV=production
+NEXT_PUBLIC_GTM_ID=G-########## #GTM NAME: Assigns correct GTM id whether on production or development
 
 # GOOGLE ANALYTICS
-GTM_ID= 'G-##########'
+GTM_ID=G-########## #Combining GTM w. Analytics may cause issues
+
+# SENDGRID API / EMAIL SIGNUP
+# Make sure to have production and development keys
+SENDGRID_API_KEY='SG.#########' #NOTE APIKEY Name for Reference
+SENDGRID_FROM_EMAIL=youremail@example.com #Ensure domain email is verified on Sendgrid account

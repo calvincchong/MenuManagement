@@ -22,6 +22,8 @@ import {
 import Accordion from './Accordion';
 // import Message from './AddToCartNotification';
 
+import MenuFilterWithTransition from './MenuFilterWithTransition';
+
 const headerTCSS =
   'flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20';
 
@@ -93,7 +95,7 @@ const OrderingApp = ({ items, categories }) => {
             : styles.menuContainerWithoutCart
         }
       >
-        <MenuFilter categories={categories} />
+        <MenuFilterWithTransition categories={categories} />
         <div className="w-12/12 sm:w-12/12 md:w-9/12">
           {categories.filter(filterCategories).map((category, i) => {
             const itemsByCategory = items.filter(item => {

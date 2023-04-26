@@ -65,13 +65,13 @@ const Menu = async (req, res) => {
               Homemade Malaysian Food - no passport needed
             </div>
             <div className="text-slate-50 py-2">
-              Call 718-827-1698 to place your order.
+              Call 718-837-1698 to place your order.
             </div>
           </div>
         </div>
         {!isMostRecentMenu ? <NotUpdatedMessage /> : null}
         <OrderingApp items={databaseItems} categories={categories} />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
