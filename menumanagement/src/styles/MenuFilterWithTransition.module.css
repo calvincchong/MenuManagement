@@ -41,7 +41,6 @@
 
 .text-selected-category {
   display: none;
-  outline: 2px red solid;
 }
 
 .checkbox {
@@ -91,7 +90,7 @@
     border-left: none;
   }
 
-  .text-display-category {
+  .text-selected-category {
     display: flex;
     font-size: 0.5rem;
   }
