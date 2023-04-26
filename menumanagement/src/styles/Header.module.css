@@ -1,0 +1,9 @@
+.nav-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.nav-list li {
+  list-style: none;
+  margin-right: 1rem;
+}
