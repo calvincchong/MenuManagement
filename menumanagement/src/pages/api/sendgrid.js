@@ -18,7 +18,7 @@ async function sendEmail(req, res) {
       if (result.ok) {
         console.log('email sent successfully', result);
       }
-      // console.log('result from senging an email', result.ok);
+      console.log('result from senging an email', result);
     } catch (error) {
       console.log('error from sending an email', error);
       return res.status(error.statusCode || 500).json({ error: error.message });
