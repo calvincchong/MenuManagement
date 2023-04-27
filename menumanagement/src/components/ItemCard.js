@@ -1,8 +1,7 @@
 'use client';
 
 import styles from '../styles/ItemCard.module.css';
-import { IoBagAdd } from 'react-icons/io5';
-import { IoAddCircleSharp } from 'react-icons/io5';
+import { IoBagAdd, IoAddCircleSharp } from 'react-icons/io5';
 import { addItemToCartAndSetStorage } from '../lib/controllers/calculateCart';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectItem } from '../store/reducers/selectItemSlice';
