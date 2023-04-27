@@ -5,16 +5,16 @@ import { NextResponse } from 'next/server';
 // import { RequestCookies } from 'edge-runtime/cookies'; // This might be useful when I am running into issues
 
 // remake verifyJWT file. -> in auth file bcrypt can not run on the edge environment, it's not a full node environment that restrict some npm packages in the edge environment. Code for npm packages inside edge runtime must be static.
-const verifyJWT = async (jwt) => {
+const verifyJWT = async jwt => {
   const { payload } = await jwtVerify(
     jwt,
-    new TextEncoder().encode(process.env.JWT_SECRET) // we pass in the secret to verify JWT.
+    new TextEncoder().encode(process.env.JWT_SECRET), // we pass in the secret to verify JWT.
   );
 
   return payload;
-}
+};
 
-export default async function middleware (req, res) {
+export default async function middleware(req, res) {
   const { pathname } = req.nextUrl;
 
   if (
@@ -46,3 +46,7 @@ export default async function middleware (req, res) {
     return NextResponse.redirect(req.nextUrl);
   }
 }
+
+// export { default } from 'next-auth/middleware';
+
+// export const config = { matcher: ['/internal', '/internal/*'] };
