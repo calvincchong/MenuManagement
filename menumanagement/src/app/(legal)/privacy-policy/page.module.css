@@ -1,0 +1,27 @@
+.privacy-text {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+}
+
+.section {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.section li {
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+.section h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.section h2 {
+  font-weight: bold;
+  font-size: 16px;
+}
