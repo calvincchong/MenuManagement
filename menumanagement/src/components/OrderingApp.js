@@ -20,12 +20,8 @@ import {
   useSpringRef,
 } from '@react-spring/web';
 import Accordion from './Accordion';
-// import Message from './AddToCartNotification';
 
 import MenuFilterWithTransition from './MenuFilterWithTransition';
-
-const headerTCSS =
-  'flex relative justify-center place-content-center min-h-xxxvh bg-center bg-fixed bg-cover bg-[url(https://res.cloudinary.com/dq6rqplja/image/upload/v1678385134/Koo%20Koo%20Chicken/kkc-top-down-menu-item_seijj1.jpg)] min-h-fit min-h-20';
 
 // maps across the categories and returns a section for each set of items
 const OrderingApp = ({ items, categories }) => {
@@ -72,22 +68,7 @@ const OrderingApp = ({ items, categories }) => {
           <ItemDetails />
         </div>
       ) : null}
-      {/* <div className={headerTCSS}>
-      <div className="absolute top-1/4 text-center">
-        <div>
-          <h1 className={tcss.h1white}>
-          Our Menu
-          </h1>
-        </div>
-        <div className="text-slate-50">
-          Homemade Malaysian Food - no passport needed
-        </div>
-        <div className="text-slate-50 py-2" >
-          Call 718-827-1698 to place your order.
-        </div>
-      </div>
-    </div> */}
-      {/* <div></div> */}
+
       <div
         className={
           isShowCart

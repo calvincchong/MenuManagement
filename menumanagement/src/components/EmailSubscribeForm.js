@@ -30,15 +30,16 @@ const EmailSubscribeForm = ({ location }) => {
     // once complete set email signup success to true;
     const response = await sendWelcomeEmailSignUp(data);
 
-    if (response.error === '') {
+    console.log('response', response, 'can i access ok', response.ok);
+
+    if (response.ok === false || response.error) {
       setErrorMessage(
-        `Something went wrong, please try again later.${response.error}}`,
+        // `Something went wrong, please try again later.${response.error}}`,
+        'Something Went Wrong',
       );
     } else {
       setEmailSignupSuccess(true);
     }
-
-    // setEmailSignupSuccess(true);
   };
 
   // handles error handle submit will not swallow errors that occur inside our onSubmit call back do we should try and catch inside async requests and handle those errors gracefully
@@ -56,7 +57,7 @@ const EmailSubscribeForm = ({ location }) => {
     <div className={styles[`primary-${location}-form`]}>
       <form onSubmit={handleSubmit(onSubmit, onError)}>
         <p>Subscribe to our newsletter</p>
-        {emailSignupSuccess || errors ? (
+        {emailSignupSuccess ? (
           <div className={styles['error-message']}>
             {errors.email && <span role="alert">{errors.email.message}</span>}
             {emailSignupSuccess && <span>Thank you for subscribing!</span>}
