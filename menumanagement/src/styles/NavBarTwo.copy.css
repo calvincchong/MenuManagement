@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 1020px; */
+  max-width: 980px;
+  /* width: 100%; */
+  max-height: fit-content;
+  width: 100vw;
+}
+
+.widecontainer {
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: white;
+  max-height: fit-content;
+}
+
+/* .container:before {
+  content: " ";
+  display: table;
+  width: 100%;
+  background-color: white;
+}
+*/
+
+.kookooicon {
+  width: 100%;
+  height: 3.5rem;
+}
+
+@media (max-device-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 70px;
+    width: 100vw;
+  }
+
+  .kookooicon {
+    width: 100%;
+    height: 3.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
