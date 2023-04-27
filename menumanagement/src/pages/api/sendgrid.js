@@ -7,6 +7,8 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 async function sendEmail(req, res) {
   const { email, emailSubject, emailType } = req.body;
 
+  console.log('request received', req.body);
+
   if (emailType !== 'template') {
     try {
       const result = await sendgrid.send({
@@ -20,22 +22,32 @@ async function sendEmail(req, res) {
       }
       console.log('result from senging an email', result);
     } catch (error) {
-      console.log('error from sending an email', error);
       return res.status(error.statusCode || 500).json({ error: error.message });
     }
   } else {
+    //compose message:
+    const message = {
+      to: email,
+      from: process.env.SENDGRID_FROM_EMAIL,
+      subject: emailSubject,
+      templateId: 'd-ed2e0070567349cd9433b175d3c57ff4',
+    };
+
+    // const m2 = {
+    //   to: email,
+    //   from: process.env.SENDGRID_FROM_EMAIL,
+    //   subject: emailSubject,
+    //   templateId: 'd-ed2e0070567349cd9433b175d3c57ff4',
+    //   dynamic_template_data: {
+    //     subject: emailSubject,
+    //   },
+    // };
+
     try {
-      const result = await sendgrid.send({
-        to: email,
-        from: process.env.SENDGRID_FROM_EMAIL,
-        subject: emailSubject,
-        templateId: 'd-ed2e0070567349cd9433b175d3c57ff4',
-        dynamic_template_data: {
-          subject: emailSubject,
-        },
-      });
+      const result = await sendgrid.send(message);
     } catch (error) {
-      return res.status(error.statusCode || 500).json({ error: error.message });
+      console.log('error from sending an email', error);
+      return res.status(error.code || 500).json({ error: error.message });
     }
   }
 

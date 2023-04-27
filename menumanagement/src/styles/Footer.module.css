@@ -70,9 +70,9 @@
   text-decoration: none;
 }
 
-.footer-nav-wrapper {
+/* .footer-nav-wrapper {
   margin-inline: auto;
-}
+} */
 
 .primary-footer-nav a:is(:hover, :focus) {
   text-decoration: underline;
@@ -114,7 +114,6 @@
   max-width: calc(var(--max-width) * 0.9);
   text-align: end;
   margin-right: 2rem;
-  /* margin-bottom: -2rem; */
 }
 
 @media (max-width: 50em) {
@@ -123,7 +122,6 @@
     display: block;
     max-width: 200px;
     height: auto;
-    /* padding-inline-start: 10%; */
     margin-inline: auto;
   }
 }
@@ -137,6 +135,10 @@
 /* to adjust for other grid section centering stating at 800px */
 @media (max-width: 800px) {
   .primary-footer-form {
+    margin-inline: auto;
+  }
+
+  .footer-nav-wrapper {
     margin-inline: auto;
   }
 }

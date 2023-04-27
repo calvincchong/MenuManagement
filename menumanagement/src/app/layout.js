@@ -1,6 +1,5 @@
 import './globals.css';
 import Providers from './Providers';
-import Analytics from '../components/Analytics';
 import { gtmId, pageview } from '../lib/gtm';
 
 export default function RootLayout({ children }) {
@@ -20,10 +19,7 @@ export default function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <Providers>
-          {/* <Analytics /> */}
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

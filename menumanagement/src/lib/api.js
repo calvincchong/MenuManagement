@@ -1,12 +1,10 @@
 // Abstract some details regarding fetcher - APIs always return data.
 export const fetcher = async ({ url, method, body, json = true }) => {
-  console.log('fetch is running', {
-    url,
+  const options = {
     method,
-    body,
-    json,
-  });
-  const res = await fetch(url, {
+  };
+
+  const response = await fetch(url, {
     method: method,
     ...(body && { body: JSON.stringify(body) }),
     headers: {
@@ -17,9 +15,17 @@ export const fetcher = async ({ url, method, body, json = true }) => {
 
   // Error handling
   // TODO: Proper Error Handling for with fetch fails;
-  if (!res.ok) {
+  if (!response.ok) {
     console.log('fail here', res);
-    throw new Error('An error occurred while fetching the data.');
+    // console.log('can i see my api key', process.env.SENDGRID_API_KEY);
+    // res.json({ error: 'An error occurred while fetching the data.' });
+    // throw new Error('An error occurred while fetching the data.');
+    return {
+      ok: false,
+      error: 'An error occurred while fetching the data.',
+      statusCode: response.status,
+      message,
+    };
   }
 
   if (!json) {
@@ -28,11 +34,19 @@ export const fetcher = async ({ url, method, body, json = true }) => {
 
   if (json) {
     console.log('fetch trying to respond!');
-    console.log(res);
+    console.log(response);
     // const data = res.text() ? await res.json(): null // Takes stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.
     // return data; // return the data from the response
-    return res.json();
+    return response.json();
   }
+};
+
+export const generateErrorResponse = (res, statusCode, message) => {
+  return {
+    error: 'error',
+    statusCode: statusCode,
+    message: message,
+  };
 };
 
 // register user
@@ -70,6 +84,7 @@ export const getMenuItems = async () => {
   });
 };
 
+// API does not check if email is correct.
 export const sendWelcomeEmailSignUp = async ({ email }) => {
   return fetcher({
     url: '/api/sendgrid',
