@@ -47,7 +47,7 @@ const Footer = () => {
               <nav className={styles['primary-footer-nav']}>
                 <ul className={styles['flow']} aria-label="Footer" role="list">
                   <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
                     <a href="/catering">Catering</a>
