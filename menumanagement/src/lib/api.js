@@ -16,28 +16,30 @@ export const fetcher = async ({ url, method, body, json = true }) => {
   // Error handling
   // TODO: Proper Error Handling for with fetch fails;
   if (!response.ok) {
-    console.log('fail here', res);
+    // console.log('fail here', res);
     // console.log('can i see my api key', process.env.SENDGRID_API_KEY);
     // res.json({ error: 'An error occurred while fetching the data.' });
-    // throw new Error('An error occurred while fetching the data.');
-    return {
-      ok: false,
-      error: 'An error occurred while fetching the data.',
-      statusCode: response.status,
-      message,
-    };
+    throw new Error('An error occurred while fetching the data.');
+    return response;
+    // return {
+    //   ok: false,
+    //   error: 'An error occurred while fetching the data.',
+    //   statusCode: response.status,
+    //   message,
+    // };
   }
 
   if (!json) {
-    return res;
+    return response;
   }
 
   if (json) {
     console.log('fetch trying to respond!');
     console.log(response);
+    const data = await response.json();
     // const data = res.text() ? await res.json(): null // Takes stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.
     // return data; // return the data from the response
-    return response.json();
+    return data;
   }
 };
 

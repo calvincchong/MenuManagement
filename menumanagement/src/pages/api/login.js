@@ -22,11 +22,32 @@ export default async function login(req, res) {
 
     const user = await users.findOne({
       email: req.body.email,
-    })
+    });
 
     if (!user) {
       res.status(401);
       res.json({ error: 'Cannot find user with this email' });
+      return;
+    }
+
+    // console.log('after finding user', user);
+    // console.log(user.authorized);
+    // console.log(user.password);
+    // console.log('can i access authorized from user?', user.authorized);
+    // console.log('typeof user', typeof user);
+
+    if (
+      user.authorized !== 'Manager' ||
+      user.authorized === undefined ||
+      user.authorized === false
+    ) {
+      // console.log(
+      //   'user is not authorized am i setting header before i send to client?',
+      // );
+      res.status(401);
+      res.json({
+        error: 'User does not the right permissions to log into this portal',
+      });
       return;
     }
 
@@ -40,7 +61,7 @@ export default async function login(req, res) {
           httpOnly: true,
           path: '/',
           maxAge: 60 * 60 * 24 * 7, // 7 days
-        })
+        }),
       );
 
       // this successfully sets header and sends response
@@ -51,7 +72,4 @@ export default async function login(req, res) {
       res.json({ error: 'Invalid password' });
     }
   }
-
-
 }
-
