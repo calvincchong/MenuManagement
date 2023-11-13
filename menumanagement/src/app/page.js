@@ -15,14 +15,14 @@ import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
 import Footer from '../components/Footer';
 import { headers } from 'next/headers';
 
-export const revalidate = 3600;
+// export const revalidate = 3600;
 
 const NotUpdatedMessage = () => {
   return (
     <div className={styles.notUpdatedMessage}>
       <p className="text-red-500">
         Note that this is not the most recent menu. Please try reloading the
-        page for the most recent menu. We apologize for the inconvenience.
+        page for the most recent menu. We apologize for the inconvenience!s
       </p>
     </div>
   );
