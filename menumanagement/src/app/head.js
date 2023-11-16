@@ -17,13 +17,6 @@ export default function Head() {
     }
   }, [pathname, searchParams]);
 
-  // useEffect(() => {
-  //   router.events.on('routeChangeComplete', pageview);
-  //   return () => {
-  //     router.events.off('routeChangeComplete', pageview);
-  //   };
-  // }, [router.events]);
-
   return (
     <>
       <title>Koo Koo Chicken</title>
