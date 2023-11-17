@@ -9,10 +9,6 @@
     "lint": "next lint",
     "v": "node -v"
   },
-  "engines": {
-    "node": "18.x",
-    "npm": ">=9.5.0"
-  },
   "dependencies": {
     "@next/font": "13.1.6",
     "@react-spring/web": "^9.7.1",
