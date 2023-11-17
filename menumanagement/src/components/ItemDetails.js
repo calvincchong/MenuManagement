@@ -44,16 +44,6 @@ const ItemDetails = () => {
             dispatch(selectItem(false));
           }}
         />
-        {/* <div className={styles.imageContainer}>
-          <Image
-            src="https://rasamalaysia.com/wp-content/uploads/2019/04/chicken-satay3.jpg"
-            alt={
-              item !== null ? item.value.menuName : "Koo Koo Chicken Menu Item"
-            }
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </div> */}
         <div className={styles.itemHeader}>
           {item !== null ? item.value.menuName : 'Salt & Pepper Squid 椒鹽鮮魷'}
         </div>
