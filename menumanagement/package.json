@@ -10,7 +10,7 @@
     "v": "node -v"
   },
   "engines": {
-    "node": ">=18.17.0",
+    "node": "18.x",
     "npm": ">=9.5.0"
   },
   "dependencies": {
