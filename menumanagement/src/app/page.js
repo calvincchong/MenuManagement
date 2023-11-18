@@ -15,8 +15,6 @@ import getMenuDBSS from '../lib/serversideDBCalls/getMenuDBSS';
 import Footer from '../components/Footer';
 import { headers } from 'next/headers';
 
-export const revalidate = 3600;
-
 const NotUpdatedMessage = () => {
   return (
     <div className={styles.notUpdatedMessage}>
