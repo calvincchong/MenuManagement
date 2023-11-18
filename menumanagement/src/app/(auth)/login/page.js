@@ -2,7 +2,6 @@
 import AuthForm from '../../../components/AuthForm';
 
 const Login = () => {
-
   return (
     <div className="flex flex-col justify-center">
       <div>
@@ -10,7 +9,7 @@ const Login = () => {
       </div>
       <AuthForm mode="login" />
     </div>
-  )
-}
+  );
+};
 
 export default Login;

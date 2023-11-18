@@ -10,15 +10,17 @@ const Slideout = ({ children }) => {
     <div>
       <div>
         <button
-          className='absolute float-right z-50 right-2 top-2 text-lg bold'
-          onClick={() => {dispatch(toggleCart())}}
+          className="absolute float-right z-50 right-2 top-2 text-lg bold"
+          onClick={() => {
+            dispatch(toggleCart());
+          }}
         >
-        X
+          X
         </button>
       </div>
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default Slideout;
