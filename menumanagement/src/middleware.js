@@ -28,6 +28,9 @@ export default async function middleware(req, res) {
     pathname.startsWith('/_next') || // development next builds to this folder
     pathname.startsWith('/api') ||
     pathname.startsWith('/menu') ||
+    pathname.startsWith('/about') ||
+    pathname.startsWith('/contact') ||
+    pathname.startsWith('/catering') ||
     pathname.startsWith('/auth') ||
     pathname.startsWith('static') ||
     pathname.startsWith('/login') ||
