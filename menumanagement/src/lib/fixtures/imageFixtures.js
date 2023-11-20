@@ -8,29 +8,29 @@ export const imageFixtures = {
     {
       name: 'Lobak',
       catItemNum: 'A12',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/Lobak-min-min_dx21tn.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_50,w_994/v1682347675/SUB500/Lobak-min-min_dx21tn.webp',
     },
     {
       name: 'Ong Choy',
       catItemNum: 'R14',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/ongchoy-min_xhra2d.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/ongchoy-min_xhra2d.webp',
     },
     {
       name: 'Spices',
       catItemNum: 'XS1',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/Koo_Koo_Restaurant_Spice-min-min_hzcvyp.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/Koo_Koo_Restaurant_Spice-min-min_hzcvyp.jpg',
     },
     {
       name: 'Roti Canai',
       catItemNum: 'A1',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347998/SUB500/ROTICANAI_r5lzbn.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347998/SUB500/ROTICANAI_r5lzbn.jpg',
     },
   ],
   'Stir-Fry Noodles': [
     {
       name: 'Pearl Noodles',
       catItemNum: 'A',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347676/SUB500/PearlNoodleStirFry-min_aa0tlb.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347676/SUB500/PearlNoodleStirFry-min_aa0tlb.jpg',
     },
   ],
   Appetizers: [
@@ -38,70 +38,70 @@ export const imageFixtures = {
       name: 'Lobak',
       catItemNum: 'A12',
       chineseName: '滷肉',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/Lobak-min-min_dx21tn.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/Lobak-min-min_dx21tn.jpg',
     },
     {
       name: 'Satay',
       chineseName: '沙爹鴛鴦',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347676/SUB500/SatayYinYang-horizontal-min_rpd4vf.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347676/SUB500/SatayYinYang-horizontal-min_rpd4vf.jpg',
     },
     {
       name: 'Shrimp Papaya Salad',
       chineseName: '蝦仁木瓜沙拉',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/ShrimpSaladAppetizer-horizontal-min_cgprno.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/ShrimpSaladAppetizer-horizontal-min_cgprno.jpg',
     },
   ],
   'Soups To Share': [
     {
       name: 'Fishhead Preserved Vegetables',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/FishHeadNoodleSoupWithPreservedVegetable2-min_liazuj.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/FishHeadNoodleSoupWithPreservedVegetable2-min_liazuj.jpg',
     },
   ],
   'Rice Dishes': [
     {
       name: 'Nasi Lemak',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347676/SUB500/nasi-lemak-min_lin0tl.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347676/SUB500/nasi-lemak-min_lin0tl.jpg',
     },
   ],
   Meat: [
     {
       name: 'Curry Beef',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/Curry_Beef_on_Sizzling_Plate-min-min_zvylwt.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/Curry_Beef_on_Sizzling_Plate-min-min_zvylwt.jpg',
     },
   ],
   Sides: [
     {
       name: 'Spices',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/Koo_Koo_Restaurant_Spice-min-min_hzcvyp.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/Koo_Koo_Restaurant_Spice-min-min_hzcvyp.jpg',
     },
   ],
   Vegetable: [
     {
       name: 'Okra w. Belachan',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/okra-min-min_lgzadi.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/okra-min-min_lgzadi.jpg',
     },
     {
       name: 'Ong Choy',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/ongchoy-min_xhra2d.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/ongchoy-min_xhra2d.jpg',
     },
   ],
   Specialty: [
     {
       name: 'Prawn',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347676/SUB500/Shrimpspecial-min_o7uat1.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347676/SUB500/Shrimpspecial-min_o7uat1.jpg',
     },
   ],
   'Soup Noodles': [
     {
       name: 'Fishhead Preserved Vegetables',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/FishHeadNoodleSoupWithPreservedVegetable2-min_liazuj.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/FishHeadNoodleSoupWithPreservedVegetable2-min_liazuj.jpg',
     },
   ],
   Poultry: [
     {
       name: 'Sarang Burong',
       // catItemNum: 'A10',
-      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/v1682347675/SUB500/SarangBurong-horizontal-min_pvkiph.jpg',
+      url: 'https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_75,w_994/v1682347675/SUB500/SarangBurong-horizontal-min_pvkiph.jpg',
     },
   ],
   'Drinks & Desserts': [],
