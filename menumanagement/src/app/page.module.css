@@ -26,17 +26,15 @@
   place-content: center;
   min-height: 30vh;
   max-height: 40vh;
-  /* background-position: center; */
   background-attachment: no-repeat;
   background-attachment: fixed;
-  background-image: url('https://res.cloudinary.com/dq6rqplja/image/upload/v1682611484/jpeg-optimizer_HEADER_IMAGE_WIDE_wkihxp.jpg');
+  background-image: url('https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_41,w_2232/v1682348015/SUB500/HEADER_IMAGE_WIDE_jni1af.webp');
   background-size: 100% auto;
-  /* background-size: cover; */
-  /* min-height: fit-content; */
 }
 
 @media (max-width: 640px) {
   .photoHeader {
+    background-image: url('https://res.cloudinary.com/dq6rqplja/image/upload/c_scale,q_41,w_743/v1682348015/SUB500/HEADER_IMAGE_WIDE_jni1af.webp');
     background-attachment: initial;
     background-size: 100% 100%;
   }
