@@ -4,14 +4,8 @@
   padding: 0.1em;
   justify-content: center;
   align-items: center;
-  /* position: sticky;
-  top: 0; */
 }
 
-/**
-  * @description: Responsible for <Slideout /> after animations are rendered -
-  * styling for animation lives in OrderingApp component as of 3.22.2023
-  */
 .slideout {
   z-index: 1000;
   position: fixed;
@@ -29,7 +23,6 @@
 
 /**
   * for category & category Selection Box when cart is not expanded
-  * in tCSS: flex flex-row py-3 w-8/12 mx-auto max-w-screen-xl
   */
 .menuContainerWithCart {
   display: flex;
@@ -46,7 +39,6 @@
 
 /**
   * for category & category Selection Box when cart is expanded
-  * in tCSS: flex flex-row py-3 max-w-screen-xl mx-auto
   */
 .menuContainerWithoutCart {
   display: flex;
@@ -71,7 +63,6 @@
   .menuContainerWithCart {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     padding-bottom: 1rem;
     width: 100%;
     max-width: 100%;
@@ -82,8 +73,6 @@
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
   }
 
   .slideout {
@@ -99,15 +88,6 @@
   .categorySections {
     margin: 12px;
   }
-
-  /* .slideout {
-    top: 0;
-    right: 0;
-    width: 100%;
-    min-width: 90vw;
-    margin: 10px;
-  } */
-
   .menuContainerWithCart {
     margin-left: auto;
     margin-right: auto;

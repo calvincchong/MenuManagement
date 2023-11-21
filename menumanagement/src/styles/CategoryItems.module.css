@@ -1,17 +1,3 @@
-/* .twoCol {
-  flex-direction: row;
-  flex-direction: column;
-  column-count: 2;
-  column-fill: auto;
-  border-color: aqua;
-  border: solid;
-  border-width: 2px;
-  flex-wrap: wrap;
-  overflow: auto;
-  flex-basis: 100%;
-  clear: both;
-} */
-
 .twoCol {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 0.5em));

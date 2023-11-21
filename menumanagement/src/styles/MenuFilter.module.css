@@ -7,10 +7,6 @@
 }
 
 .categoryContainer {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
-  /* justify-content: space-between; */
   align-items: center;
   align-content: center;
   margin: 0 0 0.2rem 0;
@@ -45,11 +41,8 @@
   background-color: hsla(44, 94%, 58%, 0.592);
 }
 
-/* @media (max-device-width: 500px) { */
 @media (max-width: 640px) {
   .categoryContainer {
-    /* display:none; */
-    /* padding:none; */
     padding-right: 0.5em;
     padding-left: 0.5em;
     margin-left: 2px;
@@ -63,11 +56,6 @@
 
   .selected {
     background-color: hsla(44, 94%, 58%, 0.592);
-    /* padding-right: 0.5em;
-    padding-left: 0.5em;
-    margin-left: 2px;
-    line-height: initial;
-    display: flex; */
   }
 
   .categoryContainer:first-child {
@@ -84,7 +72,6 @@
 
   /** Turns the menu filter into a horizontal slider that stays above the*/
   .box {
-    /* width: 100%; */
     z-index: 900;
     display: flex;
     flex-direction: row;

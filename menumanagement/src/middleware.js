@@ -11,13 +11,9 @@ const verifyJWT = async jwt => {
     jwt,
     new TextEncoder().encode(process.env.JWT_SECRET), // we pass in the secret to verify JWT.
   );
-
   // console.log('what ist he payload after verifying', payload); payload.payload gives you the email.
-
   return payload;
 };
-
-// TODO: A function that takes in the current path name and returns (possibly to be memoized) the path
 
 // Intercepts all requests and checks if the user is logged in. Logged in Users have
 export default async function middleware(req, res) {
@@ -43,8 +39,6 @@ export default async function middleware(req, res) {
 
   // retrieves the jwt token from the cookie
   const jwt = req.cookies.get(process.env.JWT_COOKIE_NAME);
-
-  // console.log('in middleware, jwt: ', jwt);
 
   if (!jwt) {
     req.nextUrl.pathname = '/login';
