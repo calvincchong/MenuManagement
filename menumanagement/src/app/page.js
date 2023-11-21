@@ -32,7 +32,9 @@ const Menu = async (req, res) => {
   let databaseItems = await getMenuDBSS(); // this now works outside of the SSComponent due to webpack's top level await being allowed. Could be source of issues in the future, move back into the functional component if necessary.
   databaseItems = JSON.parse(databaseItems);
   const isMostRecentMenu = databaseItems.length > 0 ? true : false;
-  databaseItems = isMostRecentMenu ? databaseItems : await getMenuFixtures(100); // failsafe to render page when there's no data in
+  databaseItems = isMostRecentMenu
+    ? databaseItems
+    : await getMenuFixturesFromJSON(100); // failsafe to render page when there's no data in
 
   return (
     <>
