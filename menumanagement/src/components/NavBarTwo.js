@@ -5,15 +5,6 @@ import { toggleCart } from '../store/reducers/cartSlice';
 import ShoppingCart from './ShoppingCart';
 import styles from '../styles/NavBarTwo.module.css';
 import Link from 'next/link';
-import Lottie from 'lottie-react';
-import chicken_header from '../../public/chicken_header.json';
-
-<Lottie
-  className={`${styles.kookooicon}`}
-  animationData={chicken_header}
-  loop={true}
-/>;
-
 const NavBar = () => {
   const dispatch = useDispatch();
 

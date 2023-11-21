@@ -1,41 +1,38 @@
 'use client';
 import { FaShoppingCart } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
 import { toggleCart } from '../store/reducers/cartSlice';
 import ShoppingCart from './ShoppingCart';
 import styles from '../styles/NavBar.module.css';
 import Link from 'next/link';
-import Lottie from 'lottie-react';
-import chicken_header from '../../public/chicken_header.json';
+import Image from 'next/image';
+import Small_Logo from '../../public/Small_KKC_Logo_Nav.png';
+import KKC_LOGO_Small from '../../public/kookoo-logo-small.svg';
 
 const NavBar = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
-    // className="flex flex-wrap justify-between space-x-4 mx-auto max-w-screen-xl max-hd-[40px] drop-shadow-sm border-blue-50 border-b-2"
     <div className={`${styles.widecontainer}`}>
       <div className={`${styles.container}`}>
-        {/* <div> Koo Koo Logo </div> */}
         <div>
-          <div className="grid grid-cols-2 max-h-[64]">
-            <div>
-              <Lottie
-                className={`${styles.kookooicon}`}
-                animationData={chicken_header}
-                loop={true}
-              />
-            </div>
-            <div className="mt-auto mb-auto font-thin">Koo Koo Chicken</div>
-          </div>
+          <Link href="/">
+            <Image
+              className={`${styles.kookooicon}`}
+              height={57}
+              priority
+              src={KKC_LOGO_Small}
+              alt="Koo Koo Chicken Logo"
+            />
+          </Link>
         </div>
 
-        <div className="hidden sm:flex">
+        {/* <div className="hidden sm:flex">
           <ul className="flex mt-2 font-thin flex-row text-sm lg:font-medium lg:space-x-4 lg:mt-0 py-2 space-x-4">
             <li>
               <Link href="/">Home</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <ShoppingCart />
       </div>

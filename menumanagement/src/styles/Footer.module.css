@@ -6,10 +6,6 @@
   color: #ede4d1;
 }
 
-/* .footer > * > * > * {
-  outline: 2px solid #ff0000;
-} */
-
 .container {
   --max-width: 1110px;
   --padding: 1rem;
@@ -51,7 +47,6 @@
 }
 
 :where(.flow :not(:first-child)) {
-  /* margin-block-start: 0.2rem; */
   margin-top: var(1rem, 3rem);
 }
 
@@ -69,10 +64,6 @@
   color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
-
-/* .footer-nav-wrapper {
-  margin-inline: auto;
-} */
 
 .primary-footer-nav a:is(:hover, :focus) {
   text-decoration: underline;

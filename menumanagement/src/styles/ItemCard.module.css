@@ -2,9 +2,6 @@
   background-color: rgba(247, 185, 109, 0.143);
   border-color: grey;
   padding: 0.5em;
-  /*
-  margin-bottom: 20px;
-  gap: 10px; */
   display: inline-grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr minmax(0.25rem, 30px);
@@ -74,11 +71,9 @@
 
   .menuName {
     font-size: 0.9rem;
-    /* line-height: normal; */
   }
   .price {
     font-size: 0.8rem;
-    /* line-height: normal; */
   }
 
   .description {

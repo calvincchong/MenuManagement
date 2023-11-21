@@ -17,19 +17,12 @@ export default function Head() {
     }
   }, [pathname, searchParams]);
 
-  // useEffect(() => {
-  //   router.events.on('routeChangeComplete', pageview);
-  //   return () => {
-  //     router.events.off('routeChangeComplete', pageview);
-  //   };
-  // }, [router.events]);
-
   return (
     <>
       <title>Koo Koo Chicken</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
-        name="description"
+        name="Koo Koo Chicken"
         content="Malaysian Comfort Food in Brooklyn NY"
       />
       <link rel="icon" href="/favicon.ico" />
