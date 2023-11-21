@@ -1,13 +1,5 @@
 /*Container for each Categories on initial load*/
 .categorySections {
-  /* justify-content: center; */
-  /* border-color: rgba(69, 69, 206, 0.587);
-  border-style: solid; */
-  /* height: 100vh;
-  width: 80vh; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
   margin: 0.5em;
   padding: 0.1em;
   justify-content: center;
@@ -50,9 +42,6 @@
   width: 66.666667%; /* 8/12 */
   max-width: 1280px; /* max-w-screen-xl*/
   padding-bottom: 1rem;
-  /* align-items: center;
-  width: 100%;
-  height: 100%; */
 }
 
 /**
