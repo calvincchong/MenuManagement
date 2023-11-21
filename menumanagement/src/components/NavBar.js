@@ -5,7 +5,6 @@ import ShoppingCart from './ShoppingCart';
 import styles from '../styles/NavBar.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-// import chicken_header from '../../public/chicken_header.json';
 import Small_Logo from '../../public/Small_KKC_Logo_Nav.png';
 import KKC_LOGO_Small from '../../public/kookoo-logo-small.svg';
 

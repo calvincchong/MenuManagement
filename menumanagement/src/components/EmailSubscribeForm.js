@@ -75,14 +75,7 @@ const EmailSubscribeForm = ({ location }) => {
             },
           })}
         />
-        <button
-          className={styles['email-button']}
-          type="submit"
-          // onClick={e => {
-          //   e.preventDefault();
-          //   handleSubmit(onSubmit);
-          // }}
-        >
+        <button className={styles['email-button']} type="submit">
           GO
         </button>
       </form>

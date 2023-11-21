@@ -13,7 +13,7 @@ const nextConfig = {
     domains: [
       '**.rasamalaysia.com',
       'res.cloudinary.com',
-      'www.kookoochicken.com',
+      '**.kookoochicken.com',
     ],
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
